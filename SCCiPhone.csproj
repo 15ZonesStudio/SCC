@@ -1,0 +1,277 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{35FC026F-C9E0-43F2-AFA8-C722F2267197}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SCCiPhone</RootNamespace>
+    <AssemblyName>SCCiPhone</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>1.0</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Jia Li (23ZVV3X99M)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>49138</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>BeforeBuild</type>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>false</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <BuildIpa>true</BuildIpa>
+    <MtouchSdkVersion></MtouchSdkVersion>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Data" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.0\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlite3">
+      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.0\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.0\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.0\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.2.1\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\Xamarin.iOS10\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\Xamarin.iOS10\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\Xamarin.iOS10\ZXingNetMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>..\packages\OxyPlot.Core.1.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xamarin.iOS">
+      <HintPath>..\packages\OxyPlot.Xamarin.iOS.1.0.0\lib\Xamarin.iOS10\OxyPlot.Xamarin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Tesseract.Binding.iOS">
+      <HintPath>..\packages\Xamarin.Tesseract.0.3.2\lib\Xamarin.iOS10\Tesseract.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Tesseract">
+      <HintPath>..\packages\Xamarin.Tesseract.0.3.2\lib\Xamarin.iOS10\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="Tesseract.iOS">
+      <HintPath>..\packages\Xamarin.Tesseract.0.3.2\lib\Xamarin.iOS10\Tesseract.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 129.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x57.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 140.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 157.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="SCCiPhone\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Launch.storyboard" />
+    <InterfaceDefinition Include="V2.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="sccMain.sqlite" />
+    <None Include="test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="TableSource.cs" />
+    <Compile Include="setData.cs" />
+    <Compile Include="NewTrans.cs" />
+    <Compile Include="NewTrans.designer.cs">
+      <DependentUpon>NewTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sum.cs" />
+    <Compile Include="sum.designer.cs">
+      <DependentUpon>sum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Erase.cs" />
+    <Compile Include="Erase.designer.cs">
+      <DependentUpon>Erase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sm.cs" />
+    <Compile Include="sm.designer.cs">
+      <DependentUpon>sm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="smgo.cs" />
+    <Compile Include="smgo.designer.cs">
+      <DependentUpon>smgo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bar.cs" />
+    <Compile Include="bar.designer.cs">
+      <DependentUpon>bar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePlotModel.cs" />
+    <Compile Include="InitBar.cs" />
+    <Compile Include="InitBar.designer.cs">
+      <DependentUpon>InitBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox.cs" />
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListDetail.cs" />
+    <Compile Include="ListDetail.designer.cs">
+      <DependentUpon>ListDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteController.cs" />
+    <Compile Include="WebsiteController.designer.cs">
+      <DependentUpon>WebsiteController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionHandles.cs" />
+    <Compile Include="HomeView.cs" />
+    <Compile Include="HomeView.designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllTransaction.cs" />
+    <Compile Include="AllTransaction.designer.cs">
+      <DependentUpon>AllTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewTransaction.cs" />
+    <Compile Include="NewTransaction.designer.cs">
+      <DependentUpon>NewTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingTavl.cs" />
+    <Compile Include="ShoppingMode.cs" />
+    <Compile Include="ShoppingMode.designer.cs">
+      <DependentUpon>ShoppingMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Set.cs" />
+    <Compile Include="Set.designer.cs">
+      <DependentUpon>Set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetBudget.cs" />
+    <Compile Include="SetBudget.designer.cs">
+      <DependentUpon>SetBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Details.cs" />
+    <Compile Include="Details.designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs" />
+    <Compile Include="Search.designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TinyIoC.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\delete-512.png" />
+    <BundleResource Include="Resources\Artboard 180.png" />
+    <BundleResource Include="Resources\Artboard 1180.png" />
+    <BundleResource Include="Resources\15zones110x110.png" />
+    <BundleResource Include="Resources\Artboard 140.png" />
+    <BundleResource Include="Resources\Artboard 1%402x40.png" />
+    <BundleResource Include="Resources\Artboard 1%403x40.png" />
+    <BundleResource Include="Resources\Artboard 160.png" />
+    <BundleResource Include="Resources\IconMini.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\IconS.png" />
+    <BundleResource Include="Resources\Plus.png" />
+    <BundleResource Include="Resources\N.png" />
+    <BundleResource Include="Resources\ShoppingCart.png" />
+    <BundleResource Include="Resources\Cart.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
