@@ -90,7 +90,7 @@ namespace SCCiPhone
             Console.WriteLine(Source.SelectedItem);
             Source.ItemSelected += (object sender, EventArgs e) => LaunchDetail(Source.SelectedItem);
             Console.WriteLine(Source.SelectedItem);
-
+            Console.WriteLine("hey");
 
 		}
 		public void LaunchDetail(string _id)
