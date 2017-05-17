@@ -31,17 +31,19 @@ namespace SCCiPhone
         }
         partial void UIButton6081_TouchUpInside(UIButton sender)
         {
-            float amountL = float.Parse(amount.Text);
-            string itemL = item.Text;
-            float quantity = float.Parse(quant.Text);
-            float discountL = float.Parse(discont.Text);
-            names.Add(ID,quantity.ToString()+" of "+item);
-            if (discountL.ToString() != "" & discountL.ToString() != "0")
-            {
-                discountL = 0;
-            }
-            amounts.Add(ID, (amountL*quantity) - discountL * amountL);
-            Refresh();
+            
+                float amountL = float.Parse(amount.Text);
+                string itemL = item.Text;
+                float quantity = float.Parse(quant.Text);
+                float discountL = float.Parse(discont.Text);
+                names.Add(ID, quantity.ToString() + " of " + item);
+                if (discountL.ToString() != "" & discountL.ToString() != "0")
+                {
+                    discountL = 0;
+                }
+                amounts.Add(ID, (amountL * quantity) - discountL * amountL);
+                Refresh();
+            
         }
     }
 }

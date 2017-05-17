@@ -33,7 +33,21 @@ namespace SCCiPhone
 			lookup.Prepare();
 			lookup.Parameters.AddWithValue("@month", DateTime.Now.Month.ToString());
 			lookup.Parameters.AddWithValue("@year", DateTime.Now.Year.ToString());
-			var reader = lookup.ExecuteReader();
+            SqliteDataReader reader;
+            try
+            {
+                reader = lookup.ExecuteReader();
+            }
+            catch
+            {
+                m_dbConnection = _connection.CreateEmptyDatabase();
+				lookup = m_dbConnection.CreateCommand();
+				lookup.CommandText = "SELECT * FROM m_scc WHERE month like @month AND year like @year;";
+				lookup.Prepare();
+				lookup.Parameters.AddWithValue("@month", DateTime.Now.Month.ToString());
+				lookup.Parameters.AddWithValue("@year", DateTime.Now.Year.ToString());
+                reader = lookup.ExecuteReader();
+            }
 			float tally = 0;
 			while (reader.Read())
 			{
