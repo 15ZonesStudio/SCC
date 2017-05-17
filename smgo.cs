@@ -41,10 +41,10 @@ namespace SCCiPhone
 
 		partial void UIButton2837_TouchUpInside(UIButton sender)
 		{
-			var controller = Storyboard.InstantiateViewController("NewTrans") as NewTrans;
+		//	var controller = Storyboard.InstantiateViewController("NewTrans") as NewTrans;
 //			controller.sm = true;
 //			controller.amountsm = sum;
-			PresentViewController(controller, true, null);
+		//	PresentViewController(controller, true, null);
 		}
 	}
 

@@ -22,7 +22,6 @@ namespace SCCiPhone
 		protected string[] TableItems;
 		protected string cellId = "TableCell";
 		protected string[] TableSubtitles;
-        protected ViewController vc;
 		protected UITableView tbv;
 		public bool sm = false;
 		public bool delete = true;
