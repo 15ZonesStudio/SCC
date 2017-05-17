@@ -157,7 +157,6 @@
     <Folder Include="SCCiPhone\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Launch.storyboard" />
     <InterfaceDefinition Include="V2.storyboard" />
   </ItemGroup>
@@ -171,25 +170,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="SQLiteAsync.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="TableSource.cs" />
     <Compile Include="setData.cs" />
-    <Compile Include="NewTrans.cs" />
-    <Compile Include="NewTrans.designer.cs">
-      <DependentUpon>NewTrans.cs</DependentUpon>
-    </Compile>
     <Compile Include="sum.cs" />
     <Compile Include="sum.designer.cs">
       <DependentUpon>sum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Erase.cs" />
-    <Compile Include="Erase.designer.cs">
-      <DependentUpon>Erase.cs</DependentUpon>
     </Compile>
     <Compile Include="sm.cs" />
     <Compile Include="sm.designer.cs">
@@ -208,10 +195,6 @@
     <Compile Include="InitBar.designer.cs">
       <DependentUpon>InitBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="AboutBox.cs" />
-    <Compile Include="AboutBox.designer.cs">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListDetail.cs" />
     <Compile Include="ListDetail.designer.cs">
       <DependentUpon>ListDetail.cs</DependentUpon>
@@ -225,10 +208,6 @@
     <Compile Include="HomeView.designer.cs">
       <DependentUpon>HomeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllTransaction.cs" />
-    <Compile Include="AllTransaction.designer.cs">
-      <DependentUpon>AllTransaction.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewTransaction.cs" />
     <Compile Include="NewTransaction.designer.cs">
       <DependentUpon>NewTransaction.cs</DependentUpon>
@@ -237,10 +216,6 @@
     <Compile Include="ShoppingMode.cs" />
     <Compile Include="ShoppingMode.designer.cs">
       <DependentUpon>ShoppingMode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Set.cs" />
-    <Compile Include="Set.designer.cs">
-      <DependentUpon>Set.cs</DependentUpon>
     </Compile>
     <Compile Include="SetBudget.cs" />
     <Compile Include="SetBudget.designer.cs">
