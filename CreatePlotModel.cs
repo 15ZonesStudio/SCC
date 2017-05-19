@@ -4,7 +4,7 @@ using OxyPlot.Series;
 using OxyPlot.Axes;
 namespace SCCiPhone
 {
-	//Disregard this file. This is just a demo and will be discarded sonner or later.
+	//MODEL FOR FUTURE CHARTS. NOT A SCC FILE
 	public class CreatePlotModel
 	{
 		private PlotModel Create()
