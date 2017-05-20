@@ -12,7 +12,6 @@ namespace SCCiPhone
         }
 		public override void ViewDidLoad()
 		{
-            //ser
 			base.ViewDidLoad();
 			ConnectionHandles _connection = new ConnectionHandles();
 			SqliteConnection m_dbConnection = _connection.CreateConnection();
