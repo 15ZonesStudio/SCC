@@ -1,7 +1,6 @@
 ﻿using Foundation;
 using System;
 using UIKit;
-using TinyIoC;
 //using Tesseract;
 //using Tesseract.iOS;
 using AVKit;
