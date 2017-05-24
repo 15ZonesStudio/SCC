@@ -165,7 +165,6 @@
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
     <None Include="sccMain.sqlite" />
-    <None Include="test.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -186,11 +185,6 @@
     <Compile Include="smgo.designer.cs">
       <DependentUpon>smgo.cs</DependentUpon>
     </Compile>
-    <Compile Include="bar.cs" />
-    <Compile Include="bar.designer.cs">
-      <DependentUpon>bar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreatePlotModel.cs" />
     <Compile Include="InitBar.cs" />
     <Compile Include="InitBar.designer.cs">
       <DependentUpon>InitBar.cs</DependentUpon>
@@ -230,6 +224,7 @@
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
     <Compile Include="TinyIoC.cs" />
+    <Compile Include="TestGitSevices.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delete-512.png" />

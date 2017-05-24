@@ -1,7 +1,7 @@
 ﻿using Foundation;
 using System;
 using UIKit;
-using SQLitePCL;
+//using SQLitePCL;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Drawing;
 using System.Globalization;
 using Mono.Data.Sqlite;
-using ZXing;
+//using ZXing;
 namespace SCCiPhone
 {
     

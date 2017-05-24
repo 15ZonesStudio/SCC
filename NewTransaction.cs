@@ -2,8 +2,8 @@
 using System;
 using UIKit;
 using TinyIoC;
-using Tesseract;
-using Tesseract.iOS;
+//using Tesseract;
+//using Tesseract.iOS;
 using AVKit;
 using AVFoundation;
 using System.Threading;
@@ -12,9 +12,7 @@ namespace SCCiPhone
 {
     public partial class NewTransaction : UIViewController
     {
-		AVCaptureSession captureSession;
-		AVCaptureDeviceInput captureDeviceInput;
-		AVCaptureStillImageOutput stillImageOutput;
+		
         public NewTransaction (IntPtr handle) : base (handle)
         {
         }

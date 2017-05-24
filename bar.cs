@@ -1,7 +1,7 @@
 using Foundation;
 using System;
 using UIKit;
-using SQLitePCL;
+//using SQLitePCL;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
