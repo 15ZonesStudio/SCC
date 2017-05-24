@@ -185,7 +185,6 @@
     <Compile Include="Search.designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestGitSevices.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delete-512.png" />
