@@ -32,7 +32,7 @@ namespace SCCiPhone
             tbv.ReloadData();
 			string[] data = new string[ID + 1];
 			string[] amount = new string[ID + 1];
-			for (int i = ID - 1; i > -1; i--)
+			for (int i = ID - 1; i > 0; i--)
 			{
 
 				string amounted = amounts[i].ToString();
@@ -52,7 +52,7 @@ namespace SCCiPhone
 		}
 		public override UITableViewCell GetCell(UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-			UITableViewCell cell = tableView.DequeueReusableCell(cellId);
+            UITableViewCell cell = tableView.DequeueReusableCell(cellId);
 			cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellId);
 			cell.TextLabel.Text = TableItems[indexPath.Row];
 			cell.DetailTextLabel.Text = TableSubtitles[indexPath.Row];

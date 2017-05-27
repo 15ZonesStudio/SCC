@@ -10,7 +10,7 @@ namespace SCCiPhone
     {
 		Dictionary<int, float> amounts = new Dictionary<int, float>();
 		Dictionary<int, string> names = new Dictionary<int, string>();
-        int ID = 0;
+        int ID = 1;
         public ShoppingMode (IntPtr handle) : base (handle)
         {
         }
@@ -19,7 +19,7 @@ namespace SCCiPhone
             
 			string[] data = new string[ID + 1];
             string[] amount = new string[ID + 1];
-			for (int i = ID - 1; i > -1; i--)
+			for (int i = ID - 1; i > 0; i--)
 			{
 
 				string amounted = amounts[i].ToString();

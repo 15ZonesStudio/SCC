@@ -1,18 +1,22 @@
 ﻿<Properties StartupConfiguration="{35FC026F-C9E0-43F2-AFA8-C722F2267197}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="SCC Status">
     <Files>
-      <File FileName="ShoppingMode.cs" Line="1" Column="1" />
-      <File FileName="AppDelegate.cs" Line="4" Column="3" />
-      <File FileName="TableSource.cs" Line="12" Column="3" />
-      <File FileName="sum.cs" Line="4" Column="3" />
-      <File FileName="sm.cs" Line="4" Column="3" />
-      <File FileName="smgo.cs" Line="4" Column="3" />
-      <File FileName="bar.cs" Line="15" Column="3" />
-      <File FileName="CreatePlotModel.cs" Line="2" Column="7" />
-      <File FileName="HomeView.cs" Line="12" Column="3" />
-      <File FileName="NewTransaction.cs" Line="24" Column="37" />
+      <File FileName="ShoppingMode.cs" Line="35" Column="1" />
+      <File FileName="ShoppingTavl.cs" Line="16" Column="26" />
+      <File FileName="Main.cs" Line="6" Column="3" />
       <File FileName="SCC Status" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SCCiPhone" expanded="True">
+            <Node name="SCCiPhone" expanded="True">
+              <Node name="ShoppingTavl.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
