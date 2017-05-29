@@ -53,69 +53,64 @@ namespace SCCiPhone
 		}
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-			try
-			{
-  
-				var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-				var filename = Path.Combine(documents, "sccMain.sqlite");
-				//var filename = Path.Combine("/Users/liujack/Desktop/Dididi/sccMain.sqlite");
-				var m_dbConnection = new SqliteConnection("Data Source= " + filename + ";");
-				m_dbConnection.Open();
-				var flip = m_dbConnection.CreateCommand();
-				flip.CommandText = "SELECT * FROM m_scc ORDER BY _id DESC LIMIT 1";
-				var r = flip.ExecuteReader();
-				r.Read();
-				string[] data = new string[Int32.Parse(r["_id"].ToString()) + 1];
-				string[] SubData = new string[Int32.Parse(r["_id"].ToString()) + 1];
-				string[] di = { "" };
-				string[] du = { "" };
-				int a;
-				for (a = 1; a < Int32.Parse(r["_id"].ToString()); a = a + 1)
-				{
-					SqliteDataReader s = lookupid(m_dbConnection, a);
-					float amount = float.Parse(s["amount"].ToString());
-					int day = Int32.Parse(s["day"].ToString());
-					int month = Int32.Parse(s["month"].ToString());
-					int year = Int32.Parse(s["year"].ToString());
-					string store = s["store"].ToString();
-					string label = store + " | $" + amount.ToString();
-					string subLabel = month.ToString() + "/" + day.ToString() + "/" + year.ToString();
-					SubData[a] = subLabel;
-					data[a] = label;
-				}
-				a = Int32.Parse(r["_id"].ToString());
-				SqliteDataReader ss = lookupid(m_dbConnection, a);
-				float amounts = float.Parse(ss["amount"].ToString());
-				int days = Int32.Parse(ss["day"].ToString());
-				int months = Int32.Parse(ss["month"].ToString());
-				int years = Int32.Parse(ss["year"].ToString());
-				string stores = ss["store"].ToString();
-				string labels = stores + " | $" + amounts.ToString();
-				string subLabels = months.ToString() + "/" + days.ToString() + "/" + years.ToString();
-				SubData[a] = subLabels;
-				data[a] = labels;
+            try
+            {
+                var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                var filename = Path.Combine(documents, "sccMain.sqlite");
+                //var filename = Path.Combine("/Users/liujack/Desktop/Dididi/sccMain.sqlite");
+                var m_dbConnection = new SqliteConnection("Data Source= " + filename + ";");
+                m_dbConnection.Open();
+                var flip = m_dbConnection.CreateCommand();
+                flip.CommandText = "SELECT * FROM m_scc ORDER BY _id DESC LIMIT 1";
+                var r = flip.ExecuteReader();
+                r.Read();
+                string[] data = new string[Int32.Parse(r["_id"].ToString()) + 1];
+                string[] SubData = new string[Int32.Parse(r["_id"].ToString()) + 1];
+                string[] di = { "" };
+                string[] du = { "" };
+                int a;
+                for (a = 1; a < Int32.Parse(r["_id"].ToString()); a = a + 1)
+                {
+                    SqliteDataReader s = lookupid(m_dbConnection, a);
+                    float amount = float.Parse(s["amount"].ToString());
+                    int day = Int32.Parse(s["day"].ToString());
+                    int month = Int32.Parse(s["month"].ToString());
+                    int year = Int32.Parse(s["year"].ToString());
+                    string store = s["store"].ToString();
+                    string label = store + " | $" + amount.ToString();
+                    string subLabel = month.ToString() + "/" + day.ToString() + "/" + year.ToString();
+                    SubData[a] = subLabel;
+                    data[a] = label;
+                }
+                a = Int32.Parse(r["_id"].ToString());
+                SqliteDataReader ss = lookupid(m_dbConnection, a);
+                float amounts = float.Parse(ss["amount"].ToString());
+                int days = Int32.Parse(ss["day"].ToString());
+                int months = Int32.Parse(ss["month"].ToString());
+                int years = Int32.Parse(ss["year"].ToString());
+                string stores = ss["store"].ToString();
+                string labels = stores + " | $" + amounts.ToString();
+                string subLabels = months.ToString() + "/" + days.ToString() + "/" + years.ToString();
+                SubData[a] = subLabels;
+                data[a] = labels;
                 ConnectionHandles _connection = new ConnectionHandles();
-				float budgetgoal = _connection.lookupsettings(m_dbConnection, "budget");
-				Console.WriteLine("bi" + budgetgoal.ToString());
-				if (budgetgoal == 0)
-				{
-					Console.WriteLine("SCCSTATUS: Budget Is 0!");
-					UIAlertView messagebox = new UIAlertView("Set your budget!", "Set your budget goal at \"Set Budget\"!", null, "Ok", null);
-					messagebox.Show();
-				}
-				else
-				{
-					
-				}
-				// Perform any additional setup after loading the view, typically from a nib.
-				m_dbConnection.Close();
-			}
-			catch
-			{
-				Console.WriteLine("SCCSTATUS: No Transaction Found");
-				UIAlertView messagebox = new UIAlertView("Nothing out here....", "Go out, shop, and create a transaction!", null, "Ok", null);
-				messagebox.Show();
-			}
+                float budgetgoal = _connection.lookupsettings(m_dbConnection, "budget");
+                Console.WriteLine("bi" + budgetgoal.ToString());
+                if (budgetgoal == 0)
+                {
+                    Console.WriteLine("SCCSTATUS: Budget Is 0!");
+                    UIAlertView messagebox = new UIAlertView("Set your budget!", "Set your budget goal at \"Set Budget\"!", null, "Ok", null);
+                    messagebox.Show();
+                }
+                else
+                {
+
+                }
+                // Perform any additional setup after loading the view, typically from a nib.
+                m_dbConnection.Close();
+
+            }
+            catch{}
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 

@@ -1,28 +1,24 @@
 ﻿<Properties StartupConfiguration="{35FC026F-C9E0-43F2-AFA8-C722F2267197}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="SCC Status">
     <Files>
-      <File FileName="ShoppingMode.cs" Line="35" Column="1" />
-      <File FileName="ShoppingTavl.cs" Line="16" Column="26" />
-      <File FileName="Main.cs" Line="6" Column="3" />
+      <File FileName="V2.storyboard" />
+      <File FileName="ConnectionHandles.cs" Line="56" Column="1" />
+      <File FileName="GraphMenu.cs" Line="35" Column="75" />
+      <File FileName="MonthlyUsageChart.cs" Line="99" Column="117" />
+      <File FileName="StorewiseUsageChart.cs" Line="94" Column="113" />
+      <File FileName="Main.cs" Line="12" Column="1" />
+      <File FileName="TableSource.cs" Line="172" Column="82" />
+      <File FileName="AllTransaction.cs" Line="63" Column="65" />
+      <File FileName="AppDelegate.cs" Line="111" Column="17" />
+      <File FileName="HomeView.cs" Line="79" Column="33" />
       <File FileName="SCC Status" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SCCiPhone" expanded="True">
-            <Node name="SCCiPhone" expanded="True">
-              <Node name="ShoppingTavl.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.SCCiPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8320C3C3-5B43-4926-8CD1-6EB80384884E" />
+  <MonoDevelop.Ide.ItemProperties.SCCiPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B15B3611-D423-41EA-9339-62A45CB5467B" />
   <MultiItemStartupConfigurations />
 </Properties>

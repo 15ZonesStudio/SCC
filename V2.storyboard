@@ -95,11 +95,21 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5566">
                                 <rect key="frame" x="313" y="29" width="30" height="30"/>
-                                <state key="normal" title="🔍">
+                                <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="5708" kind="show" id="5843"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6326" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="5" y="254" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Insights">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="6515" destination="6313" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,6 +129,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="122" secondAttribute="trailing" constant="4" id="5258"/>
                             <constraint firstItem="5566" firstAttribute="top" secondItem="2" secondAttribute="bottom" constant="9" id="5753"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5566" secondAttribute="trailing" constant="16" id="5754"/>
+                            <constraint id="6801" firstItem="6326" firstAttribute="top" secondItem="2" secondAttribute="bottom" constant="234"/>
+                            <constraint id="6802" firstItem="6" firstAttribute="leadingMargin" secondItem="6326" secondAttribute="leading" constant="11"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -133,6 +145,7 @@
                                 <exclude reference="4560"/>
                                 <exclude reference="4914"/>
                                 <exclude reference="5566"/>
+                                <exclude reference="6326"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5254"/>
@@ -149,6 +162,8 @@
                                 <exclude reference="5227"/>
                                 <exclude reference="5228"/>
                                 <exclude reference="5229"/>
+                                <exclude reference="6801"/>
+                                <exclude reference="6802"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -164,6 +179,7 @@
                                 <include reference="4560"/>
                                 <include reference="4914"/>
                                 <include reference="5566"/>
+                                <include reference="6326"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="5254"/>
@@ -180,6 +196,8 @@
                                 <include reference="5227"/>
                                 <include reference="5228"/>
                                 <include reference="5229"/>
+                                <include reference="6801"/>
+                                <include reference="6802"/>
                             </mask>
                         </variation>
                     </view>
@@ -641,10 +659,9 @@
                                 <connections>
                                     <action selector="UIButton6081_TouchUpInside:" destination="4012" eventType="touchUpInside" id="6082"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6083" fixedFrame="YES" placeholder="15">
-                                <rect key="frame" x="155" y="352" width="135" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6083" placeholder="15">
+                                <rect key="frame" x="155" y="440" width="135" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact"/>
@@ -1357,6 +1374,101 @@
             </objects>
             <point key="canvasLocation" x="1838" y="998"/>
         </scene>
+        <scene sceneID="6312">
+            <objects>
+                <viewController id="6313" sceneMemberID="viewController" customClass="GraphMenu">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6310"/>
+                        <viewControllerLayoutGuide type="bottom" id="6311"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6314">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" id="6319" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="46" width="314" height="310"/>
+                                <connections>
+                                    <segue destination="6321" kind="embed" id="6320" identifier="MonthlyUsageChart"/>
+                                </connections>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6535" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="16" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="6612" destination="5" kind="show"/>
+                                </connections>
+                            </button>
+                            <containerView contentMode="scaleToFill" id="6726" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="371" width="320" height="55"/>
+                                <connections>
+                                    <segue destination="6728" kind="embed" id="6727" identifier="StorewiseUsageChart"/>
+                                </connections>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </containerView>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6535"/>
+                                <exclude reference="6726"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6535"/>
+                                <include reference="6726"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="MonthlyGraphContainer" destination="6319" id="name-outlet-6319"/>
+                        <outlet property="StorelyGraphContainer" destination="6726" id="name-outlet-6726"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6315" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2390" y="1017"/>
+        </scene>
+        <scene sceneID="6322">
+            <objects>
+                <viewController id="6321" sceneMemberID="viewController" customClass="MonthlyUsageChart">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6317"/>
+                        <viewControllerLayoutGuide type="bottom" id="6318"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6323">
+                        <rect key="frame" x="0.0" y="0.0" width="314" height="310"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6324" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2760" y="100"/>
+        </scene>
+        <scene sceneID="6729">
+            <objects>
+                <viewController id="6728" sceneMemberID="viewController" customClass="StorewiseUsageChart" storyboardIdentifier="Store Usage Chart">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6724"/>
+                        <viewControllerLayoutGuide type="bottom" id="6725"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6730">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6731" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2746" y="581"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cart.png" width="18" height="18"/>
@@ -1378,6 +1490,6 @@
         <segue reference="5920"/>
     </inferredMetricsTieBreakers>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

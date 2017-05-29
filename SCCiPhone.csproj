@@ -100,6 +100,9 @@
     <Reference Include="OxyPlot">
       <HintPath>packages\OxyPlot.Core.1.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
     </Reference>
+    <Reference Include="OxyPlot.Xamarin.iOS">
+      <HintPath>packages\OxyPlot.Xamarin.iOS.1.0.0\lib\Xamarin.iOS10\OxyPlot.Xamarin.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -184,6 +187,20 @@
     <Compile Include="Search.cs" />
     <Compile Include="Search.designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyUsageChart.cs" />
+    <Compile Include="MonthlyUsageChart.designer.cs">
+      <DependentUpon>MonthlyUsageChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphMenu.cs" />
+    <Compile Include="GraphMenu.designer.cs">
+      <DependentUpon>GraphMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllTransaction.cs" />
+    <Compile Include="AllTransaction.designer.cs" />
+    <Compile Include="StorewiseUsageChart.cs" />
+    <Compile Include="StorewiseUsageChart.designer.cs">
+      <DependentUpon>StorewiseUsageChart.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

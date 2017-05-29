@@ -1,28 +1,29 @@
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.csproj.CoreCompileInputs.cache
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/SCCiPhone.exe
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/SCCiPhone.pdb
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.exe
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.pdb
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.dll
+/Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.Xamarin.iOS.dll
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.pdb
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.xml
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.csprojResolveAssemblyReference.cache
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/ibtool/_BundleResourceWithLogicalName.items
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_PartialAppManifest.items
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_BundleResourceWithLogicalName.items
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/delete-512.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Artboard 180.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Artboard 1180.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/15zones110x110.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Artboard 140.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Artboard 1@2x40.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Artboard 1@3x40.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Artboard 160.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/IconMini.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Icon.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/IconS.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Plus.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/N.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/ShoppingCart.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Cart.png
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
+/Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.Xamarin.iOS.xml
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/ibtool/_BundleResourceWithLogicalName.items
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/actool/_PartialAppManifest.items
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/actool/_BundleResourceWithLogicalName.items
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/delete-512.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Artboard 180.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Artboard 1180.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/15zones110x110.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Artboard 140.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Artboard 1@2x40.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Artboard 1@3x40.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Artboard 160.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/IconMini.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Icon.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/IconS.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Plus.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/N.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/ShoppingCart.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/Cart.png
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-10.3/optimized/
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.csproj.CoreCompileInputs.cache
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.exe
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.pdb

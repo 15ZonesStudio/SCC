@@ -28,6 +28,7 @@ namespace SCCiPhone
 			ConnectionHandles _connection = new ConnectionHandles();
 			SqliteConnection m_dbConnection = _connection.CreateConnection();
 			m_dbConnection.Open();
+
 			var lookup = m_dbConnection.CreateCommand();
 			lookup.CommandText = "SELECT * FROM m_scc WHERE month like @month AND year like @year;";
 			lookup.Prepare();
