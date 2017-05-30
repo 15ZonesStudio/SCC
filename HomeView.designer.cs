@@ -24,6 +24,14 @@ namespace SCCiPhone
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIProgressView Line { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIProgressView Lineo { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView recent { get; set; }
 
         [Outlet]
@@ -44,6 +52,16 @@ namespace SCCiPhone
             if (BudgetBar != null) {
                 BudgetBar.Dispose ();
                 BudgetBar = null;
+            }
+
+            if (Line != null) {
+                Line.Dispose ();
+                Line = null;
+            }
+
+            if (Lineo != null) {
+                Lineo.Dispose ();
+                Lineo = null;
             }
 
             if (recent != null) {

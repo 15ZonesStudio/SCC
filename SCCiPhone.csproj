@@ -202,6 +202,10 @@
     <Compile Include="StorewiseUsageChart.designer.cs">
       <DependentUpon>StorewiseUsageChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Erase_Database.cs" />
+    <Compile Include="Erase_Database.designer.cs">
+      <DependentUpon>Erase_Database.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delete-512.png" />
@@ -219,6 +223,7 @@
     <BundleResource Include="Resources\N.png" />
     <BundleResource Include="Resources\ShoppingCart.png" />
     <BundleResource Include="Resources\Cart.png" />
+    <BundleResource Include="BackgroundGradiant.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

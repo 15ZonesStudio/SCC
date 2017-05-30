@@ -8,11 +8,15 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
 using System.Globalization;
+using CoreGraphics;
 using Mono.Data.Sqlite;
+using OxyPlot;
+using OxyPlot.Xamarin.iOS;
+using OxyPlot.Axes;
+using OxyPlot.Series;
 //using ZXing;
 namespace SCCiPhone
 {
-    
     public partial class HomeView : UIViewController
     {
 		TableSource Source = null;
@@ -25,10 +29,10 @@ namespace SCCiPhone
 		public override void ViewDidLoad()
 		{
             base.ViewDidLoad();
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
 			ConnectionHandles _connection = new ConnectionHandles();
 			SqliteConnection m_dbConnection = _connection.CreateConnection();
 			m_dbConnection.Open();
-
 			var lookup = m_dbConnection.CreateCommand();
 			lookup.CommandText = "SELECT * FROM m_scc WHERE month like @month AND year like @year;";
 			lookup.Prepare();
@@ -100,7 +104,9 @@ namespace SCCiPhone
 			catch { }
 			m_dbConnection.Close();
 			Source = new TableSource(LableTitle, LableDescription, recent,Ids);
-			recent.Frame = new CoreGraphics.CGRect(0, 50, View.Bounds.Width, 133);
+            CGAffineTransform transform = CGAffineTransform.MakeScale(1.0f, 0.25f);
+			Line.Transform = transform;
+            Lineo.Transform = transform;
 			recent.Source = Source;
             Console.WriteLine(Source.SelectedItem);
             Source.ItemSelected += (object sender, EventArgs e) => LaunchDetail(Source.SelectedItem);

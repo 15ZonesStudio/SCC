@@ -50,11 +50,17 @@ namespace SCCiPhone
 				{
 
 					cell = new UITableViewCell(UITableViewCellStyle.Default, cellIds[indexPath.Row]);
+                    cell.BackgroundColor = UIColor.Clear;
+                    cell.TextLabel.TextColor = UIColor.White;
+                    cell.DetailTextLabel.TextColor = new UIColor(red: 0.49f, green: 0.56f, blue: 0.62f, alpha: 1.0f);
 
 				}
 				else
 				{
 					cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIds[indexPath.Row]);
+                    cell.BackgroundColor = UIColor.Clear;
+                    cell.TextLabel.TextColor = UIColor.White;
+                    cell.DetailTextLabel.TextColor = new UIColor(red: 0.49f, green: 0.56f, blue: 0.62f, alpha: 1.0f);
 				}
 			}
 			if (sm)
