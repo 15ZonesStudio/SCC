@@ -20,43 +20,15 @@
                         <viewControllerLayoutGuide type="bottom" id="3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="100" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="73">
-                                <rect key="frame" x="9" y="75" width="350" height="358"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
-                                    <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
-                                    <color key="sectionIndexColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                    <color key="separatorColor" colorSpace="calibratedRGB" red="0.14509803921568629" green="0.35686274509803922" blue="0.5490196078431373" alpha="1"/>
-                                </variation>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7525">
-                                        <rect key="frame" x="0.0" y="28" width="295" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7525" id="7526">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7527">
-                                        <rect key="frame" x="0.0" y="72" width="295" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7527" id="7528">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6900" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES">
-                                <rect key="frame" x="-533" y="0.0" width="1441" height="900"/>
+                                <rect key="frame" x="-513" y="0.0" width="1440" height="900"/>
                                 <variation key="heightClass=regular-widthClass=compact" image="BackgroundGradiant.png"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="122">
-                                <rect key="frame" x="346" y="504" width="60" height="19"/>
+                                <rect key="frame" x="339" y="545" width="60" height="19"/>
                                 <state key="normal" title="...See All">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.054901960784313725" green="0.1803921568627451" blue="0.18823529411764706" alpha="1"/>
@@ -64,6 +36,19 @@
                                 <connections>
                                     <segue destination="144" kind="show" id="544"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="8114" firstItem="122" firstAttribute="height" constant="19"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8114"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8114"/>
+                                    </mask>
+                                </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total this month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3635">
                                 <rect key="frame" x="9" y="23" width="149" height="28"/>
@@ -79,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3763">
-                                <rect key="frame" x="235" y="625" width="129" height="38"/>
+                                <rect key="frame" x="268" y="90" width="126" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Add Transaction">
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.17254901960784313" blue="0.1803921568627451" alpha="1"/>
@@ -88,15 +73,14 @@
                                     <segue destination="626" kind="show" id="4282"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recently Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="121">
-                                <rect key="frame" x="9" y="90" width="205" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="121">
+                                <rect key="frame" x="13" y="90" width="205" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20" weight="ultraLight"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4483">
-                                <rect key="frame" x="9" y="49" width="247" height="2"/>
+                                <rect key="frame" x="13" y="49" width="247" height="2"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="1"/>
                                 <constraints>
                                     <constraint id="7364" firstAttribute="width" secondItem="4483" secondAttribute="height" multiplier="247:2"/>
@@ -113,8 +97,8 @@
                                     <color key="tintColor" colorSpace="calibratedRGB" red="0.10196078431372549" green="0.3843137254901961" blue="0.403921568627451" alpha="1"/>
                                 </variation>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4560">
-                                <rect key="frame" x="30" y="625" width="81" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4560" fixedFrame="YES">
+                                <rect key="frame" x="34" y="648" width="81" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Set Budget">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,7 +109,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4914" text="Amounts">
-                                <rect key="frame" x="164" y="55" width="84" height="12"/>
+                                <rect key="frame" x="168" y="55" width="84" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="0.094117647058823528" green="0.36862745098039218" blue="0.38823529411764707" alpha="1"/>
                                 <nil key="highlightedColor"/>
@@ -143,8 +127,8 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5566">
-                                <rect key="frame" x="268" y="578" width="64" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5566" fixedFrame="YES">
+                                <rect key="frame" x="282" y="610" width="51" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,8 +138,8 @@
                                     <segue destination="5708" kind="show" id="5843"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6326" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="42" y="578" width="57" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6326" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="46" y="608" width="57" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Insights">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,28 +150,29 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="7458">
-                                <rect key="frame" x="0.0" y="80" width="375" height="2"/>
+                                <rect key="frame" x="4" y="80" width="406" height="2"/>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <color key="tintColor" colorSpace="calibratedRGB" red="0.11764705882352941" green="0.48627450980392156" blue="0.73725490196078436" alpha="1"/>
                                 </variation>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.1"/>
                             </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="7543">
-                                <rect key="frame" x="0.0" y="462" width="375" height="2"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="7543" fixedFrame="YES">
+                                <rect key="frame" x="6" y="572" width="404" height="2"/>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <color key="tintColor" colorSpace="calibratedRGB" red="0.11764705882352941" green="0.50588235294117645" blue="0.6588235294117647" alpha="1"/>
                                 </variation>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.1"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tools" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7565" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="9" y="472" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tools" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7565" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="13" y="579" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23" weight="ultraLight"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7620">
-                                <rect key="frame" x="269" y="588" width="102" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7620" fixedFrame="YES">
+                                <rect key="frame" x="248" y="648" width="119" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Reset Database">
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.17254901960784313" blue="0.1803921568627451" alpha="1"/>
                                 </state>
@@ -196,6 +181,34 @@
                                 </connections>
                                 <variation key="heightClass=regular-widthClass=compact"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="100" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="73">
+                                <rect key="frame" x="17" y="116" width="377" height="421"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                    <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                    <color key="sectionIndexColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    <color key="separatorColor" colorSpace="calibratedRGB" red="0.14509803921568629" green="0.35686274509803922" blue="0.5490196078431373" alpha="1"/>
+                                </variation>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7525">
+                                        <rect key="frame" x="0.0" y="28" width="346" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7525" id="7526">
+                                            <rect key="frame" x="0.0" y="0.0" width="346" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7527">
+                                        <rect key="frame" x="0.0" y="72" width="346" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7527" id="7528">
+                                            <rect key="frame" x="0.0" y="0.0" width="346" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -206,34 +219,38 @@
                             <constraint id="7368" firstItem="4483" firstAttribute="top" secondItem="2" secondAttribute="bottom" constant="29"/>
                             <constraint id="7402" firstItem="4914" firstAttribute="top" secondItem="4483" secondAttribute="centerY" constant="5"/>
                             <constraint id="7403" firstItem="4914" firstAttribute="leading" secondItem="6" secondAttribute="leadingMargin" constant="148"/>
-                            <constraint id="7537" firstItem="73" firstAttribute="top" secondItem="2" secondAttribute="bottom" constant="55"/>
-                            <constraint id="7538" firstItem="3" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="185"/>
-                            <constraint id="7539" firstItem="73" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin"/>
-                            <constraint id="7540" firstItem="6" firstAttribute="leadingMargin" secondItem="73" secondAttribute="leading" constant="7"/>
                             <constraint id="7551" firstItem="7458" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin" constant="16"/>
                             <constraint id="7552" firstItem="6" firstAttribute="leadingMargin" secondItem="7458" secondAttribute="leading" constant="16"/>
-                            <constraint id="7553" firstItem="7543" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin" constant="16"/>
-                            <constraint id="7554" firstItem="6" firstAttribute="leadingMargin" secondItem="7543" secondAttribute="leading" constant="16"/>
-                            <constraint id="7555" firstItem="7543" firstAttribute="centerY" secondItem="73" secondAttribute="bottom" constant="30"/>
                             <constraint id="7556" firstItem="7458" firstAttribute="top" secondItem="2" secondAttribute="bottom" constant="60"/>
-                            <constraint id="7584" firstItem="122" firstAttribute="centerY" secondItem="73" secondAttribute="bottom" constant="11"/>
-                            <constraint id="7585" firstItem="122" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin" constant="8"/>
-                            <constraint id="7602" firstItem="5566" firstAttribute="top" secondItem="7543" secondAttribute="bottom" constant="45"/>
-                            <constraint id="7603" firstItem="6" firstAttribute="trailingMargin" secondItem="5566" secondAttribute="trailing" constant="79"/>
-                            <constraint id="7604" firstItem="3763" firstAttribute="top" secondItem="7543" secondAttribute="centerY" constant="93"/>
-                            <constraint id="7605" firstItem="6" firstAttribute="trailingMargin" secondItem="3763" secondAttribute="trailing" constant="44"/>
-                            <constraint id="7606" firstItem="6326" firstAttribute="top" secondItem="7543" secondAttribute="centerY" constant="46"/>
-                            <constraint id="7607" firstItem="6326" firstAttribute="leading" secondItem="6" secondAttribute="leadingMargin" constant="26"/>
-                            <constraint id="7608" firstItem="4560" firstAttribute="top" secondItem="7543" secondAttribute="top" constant="94"/>
-                            <constraint id="7609" firstItem="4560" firstAttribute="leading" secondItem="6" secondAttribute="leadingMargin" constant="14"/>
-                            <constraint id="7616" firstItem="7565" firstAttribute="top" secondItem="7543" secondAttribute="centerY" constant="9"/>
-                            <constraint id="7617" firstItem="6" firstAttribute="leadingMargin" secondItem="7565" secondAttribute="leading" constant="7"/>
-                            <constraint id="7688" firstItem="7620" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin" constant="12"/>
-                            <constraint id="7689" firstItem="7620" firstAttribute="top" secondItem="7543" secondAttribute="centerY" constant="125"/>
+                            <constraint id="8059" firstItem="3763" firstAttribute="top" secondItem="7458" secondAttribute="top" constant="10"/>
+                            <constraint id="8060" firstItem="6" firstAttribute="trailingMargin" secondItem="3763" secondAttribute="trailing" constant="11"/>
+                            <constraint id="8065" firstItem="73" firstAttribute="top" secondItem="2" secondAttribute="bottom" constant="96"/>
+                            <constraint id="8066" firstItem="73" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin"/>
+                            <constraint id="8067" firstItem="3" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="150"/>
+                            <constraint id="8068" firstItem="6" firstAttribute="leadingMargin" secondItem="73" secondAttribute="leading" constant="3"/>
+                            <constraint id="8075" firstItem="121" firstAttribute="top" secondItem="7458" secondAttribute="centerY" constant="9"/>
+                            <constraint id="8076" firstItem="6" firstAttribute="leadingMargin" secondItem="121" secondAttribute="leading" constant="3"/>
+                            <constraint id="8115" firstItem="122" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="8"/>
+                            <constraint id="8116" firstItem="122" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin" constant="5"/>
+                            <constraint id="8120" firstItem="3" firstAttribute="top" secondItem="7543" secondAttribute="bottom" constant="113"/>
+                            <constraint id="8121" firstItem="7543" firstAttribute="trailing" secondItem="6" secondAttribute="trailingMargin" constant="16"/>
+                            <constraint id="8122" firstItem="6" firstAttribute="leadingMargin" secondItem="7543" secondAttribute="leading" constant="14"/>
+                            <constraint id="8129" firstItem="7565" firstAttribute="top" secondItem="7543" secondAttribute="top" constant="7"/>
+                            <constraint id="8130" firstItem="6" firstAttribute="leadingMargin" secondItem="7565" secondAttribute="leading" constant="3"/>
+                            <constraint id="8131" firstItem="5566" firstAttribute="top" secondItem="7543" secondAttribute="bottom" constant="36"/>
+                            <constraint id="8132" firstItem="6" firstAttribute="trailingMargin" secondItem="5566" secondAttribute="trailing" constant="61"/>
+                            <constraint id="8133" firstItem="7620" firstAttribute="top" secondItem="7543" secondAttribute="centerY" constant="75"/>
+                            <constraint id="8134" firstItem="6" firstAttribute="trailingMargin" secondItem="7620" secondAttribute="trailing" constant="27"/>
+                            <constraint id="8135" firstItem="4560" firstAttribute="top" secondItem="7543" secondAttribute="top" constant="76"/>
+                            <constraint id="8136" firstItem="4560" firstAttribute="leading" secondItem="6" secondAttribute="leadingMargin" constant="14"/>
+                            <constraint id="8137" firstItem="6326" firstAttribute="top" secondItem="7543" secondAttribute="centerY" constant="35"/>
+                            <constraint id="8138" firstItem="6326" firstAttribute="leading" secondItem="6" secondAttribute="leadingMargin" constant="26"/>
+                            <constraint id="8139" firstItem="4560" firstAttribute="centerX" secondItem="6326" secondAttribute="centerX"/>
+                            <constraint id="8140" firstItem="4560" firstAttribute="centerX" secondItem="6326" secondAttribute="centerX"/>
+                            <constraint id="8141" firstItem="7620" firstAttribute="centerX" secondItem="5566" secondAttribute="centerX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="73"/>
                                 <exclude reference="122"/>
                                 <exclude reference="3635"/>
                                 <exclude reference="3636"/>
@@ -249,6 +266,7 @@
                                 <exclude reference="7543"/>
                                 <exclude reference="7565"/>
                                 <exclude reference="7620"/>
+                                <exclude reference="73"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6908"/>
@@ -258,36 +276,40 @@
                                 <exclude reference="7368"/>
                                 <exclude reference="7402"/>
                                 <exclude reference="7403"/>
-                                <exclude reference="7537"/>
-                                <exclude reference="7538"/>
-                                <exclude reference="7539"/>
-                                <exclude reference="7540"/>
                                 <exclude reference="7551"/>
                                 <exclude reference="7552"/>
-                                <exclude reference="7553"/>
-                                <exclude reference="7554"/>
-                                <exclude reference="7555"/>
                                 <exclude reference="7556"/>
-                                <exclude reference="7584"/>
-                                <exclude reference="7585"/>
-                                <exclude reference="7602"/>
-                                <exclude reference="7603"/>
-                                <exclude reference="7604"/>
-                                <exclude reference="7605"/>
-                                <exclude reference="7606"/>
-                                <exclude reference="7607"/>
-                                <exclude reference="7608"/>
-                                <exclude reference="7609"/>
-                                <exclude reference="7616"/>
-                                <exclude reference="7617"/>
                                 <exclude reference="7660"/>
-                                <exclude reference="7688"/>
-                                <exclude reference="7689"/>
+                                <exclude reference="8059"/>
+                                <exclude reference="8060"/>
+                                <exclude reference="8065"/>
+                                <exclude reference="8066"/>
+                                <exclude reference="8067"/>
+                                <exclude reference="8068"/>
+                                <exclude reference="8075"/>
+                                <exclude reference="8076"/>
+                                <exclude reference="8115"/>
+                                <exclude reference="8116"/>
+                                <exclude reference="8120"/>
+                                <exclude reference="8121"/>
+                                <exclude reference="8122"/>
+                                <exclude reference="8129"/>
+                                <exclude reference="8130"/>
+                                <exclude reference="8131"/>
+                                <exclude reference="8132"/>
+                                <exclude reference="8133"/>
+                                <exclude reference="8134"/>
+                                <exclude reference="8135"/>
+                                <exclude reference="8136"/>
+                                <exclude reference="8137"/>
+                                <exclude reference="8138"/>
+                                <exclude reference="8139"/>
+                                <exclude reference="8140"/>
+                                <exclude reference="8141"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="73"/>
                                 <include reference="122"/>
                                 <include reference="3635"/>
                                 <include reference="3636"/>
@@ -303,6 +325,7 @@
                                 <include reference="7543"/>
                                 <include reference="7565"/>
                                 <include reference="7620"/>
+                                <include reference="73"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6908"/>
@@ -312,31 +335,36 @@
                                 <include reference="7368"/>
                                 <include reference="7402"/>
                                 <include reference="7403"/>
-                                <include reference="7537"/>
-                                <include reference="7538"/>
-                                <include reference="7539"/>
-                                <include reference="7540"/>
                                 <include reference="7551"/>
                                 <include reference="7552"/>
-                                <include reference="7553"/>
-                                <include reference="7554"/>
-                                <include reference="7555"/>
                                 <include reference="7556"/>
-                                <include reference="7584"/>
-                                <include reference="7585"/>
-                                <include reference="7602"/>
-                                <include reference="7603"/>
-                                <include reference="7604"/>
-                                <include reference="7605"/>
-                                <include reference="7606"/>
-                                <include reference="7607"/>
-                                <include reference="7608"/>
-                                <include reference="7609"/>
-                                <include reference="7616"/>
-                                <include reference="7617"/>
                                 <include reference="7660"/>
-                                <include reference="7688"/>
-                                <include reference="7689"/>
+                                <include reference="8059"/>
+                                <include reference="8060"/>
+                                <include reference="8065"/>
+                                <include reference="8066"/>
+                                <include reference="8067"/>
+                                <include reference="8068"/>
+                                <include reference="8075"/>
+                                <include reference="8076"/>
+                                <include reference="8115"/>
+                                <include reference="8116"/>
+                                <include reference="8120"/>
+                                <include reference="8121"/>
+                                <include reference="8122"/>
+                                <include reference="8129"/>
+                                <include reference="8130"/>
+                                <include reference="8131"/>
+                                <include reference="8132"/>
+                                <include reference="8133"/>
+                                <include reference="8134"/>
+                                <include reference="8135"/>
+                                <include reference="8136"/>
+                                <include reference="8137"/>
+                                <include reference="8138"/>
+                                <include reference="8139"/>
+                                <include reference="8140"/>
+                                <include reference="8141"/>
                             </mask>
                         </variation>
                     </view>
@@ -346,10 +374,10 @@
                         <outlet property="BudgetBar" destination="4483" id="name-outlet-4483"/>
                         <outlet property="SearchBut" destination="5566" id="name-outlet-5566"/>
                         <outlet property="amt" destination="4914" id="name-outlet-4914"/>
-                        <outlet property="recent" destination="73" id="name-outlet-73"/>
                         <outlet property="tot" destination="3636" id="name-outlet-3636"/>
                         <outlet property="Line" destination="7458" id="name-outlet-7458"/>
                         <outlet property="Lineo" destination="7543" id="name-outlet-7543"/>
+                        <outlet property="recent" destination="73" id="name-outlet-73"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,7 +393,7 @@
                         <viewControllerLayoutGuide type="bottom" id="142"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="145">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="148">
@@ -424,7 +452,7 @@
             <objects>
                 <tabBarController id="626" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="629">
-                        <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                        <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -446,7 +474,7 @@
                         <viewControllerLayoutGuide type="bottom" id="773"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="776">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1991" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="827">
@@ -726,7 +754,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4010"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4013">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5292">
@@ -802,7 +830,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6083" placeholder="15">
-                                <rect key="frame" x="155" y="539" width="190" height="30"/>
+                                <rect key="frame" x="159" y="608" width="221" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact"/>
@@ -990,7 +1018,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4537"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4540">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Monthly Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4543">
@@ -1100,7 +1128,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5447"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5450">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5459">
@@ -1296,7 +1324,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5706"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5709">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lookup Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5712">
@@ -1523,7 +1551,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6311"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6314">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
@@ -1618,11 +1646,11 @@
                         <viewControllerLayoutGuide type="bottom" id="7693"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7696">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7915" translatesAutoresizingMaskIntoConstraints="NO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7915" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="10" y="27" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel">
@@ -1635,7 +1663,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7916" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="184" y="343" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1674,6 +1701,25 @@
             </objects>
             <point key="canvasLocation" x="-1045" y="980"/>
         </scene>
+        <scene sceneID="8027">
+            <objects>
+                <viewController id="8028" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8025"/>
+                        <viewControllerLayoutGuide type="bottom" id="8026"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8029">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews/>
+                    </view>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8030" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="121"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cart.png" width="18" height="18"/>
@@ -1696,6 +1742,6 @@
         <segue reference="5920"/>
     </inferredMetricsTieBreakers>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination" type="retina47"/>
+        <simulatedScreenMetrics key="destination" type="retina55"/>
     </simulatedMetricsContainer>
 </document>

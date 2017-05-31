@@ -1,4 +1,4 @@
-﻿using Foundation;
+﻿﻿using Foundation;
 using System;
 using UIKit;
 //using SQLitePCL;
@@ -94,9 +94,9 @@ namespace SCCiPhone
 					string store = r["store"].ToString();
 					string label = store + " | $" + amount.ToString();
 					string subLabel = month.ToString() + "/" + day.ToString() + "/" + year.ToString();
-					LableTitle[times] = label;
-					LableDescription[times] = subLabel;
-                    Ids[times] = r["_id"].ToString();
+					LableTitle[times-1] = label;
+					LableDescription[times-1] = subLabel;
+                    Ids[times-1] = r["_id"].ToString();
 					times++;
 				}
 			}
@@ -110,11 +110,64 @@ namespace SCCiPhone
 			recent.Source = Source;
             Console.WriteLine(Source.SelectedItem);
             Source.ItemSelected += (object sender, EventArgs e) => LaunchDetail(Source.SelectedItem);
+			Source.ItemDeleted += (object sender, EventArgs e) => RefreshViewColor();
             Console.WriteLine(Source.SelectedItem);
             Console.WriteLine("hey");
 
 		}
-		public void LaunchDetail(string _id)
+        void RefreshViewColor()
+        {
+			ConnectionHandles _connection = new ConnectionHandles();
+			SqliteConnection m_dbConnection = _connection.CreateConnection();
+			m_dbConnection.Open();
+			var lookup = m_dbConnection.CreateCommand();
+			lookup.CommandText = "SELECT * FROM m_scc WHERE month like @month AND year like @year;";
+			lookup.Prepare();
+			lookup.Parameters.AddWithValue("@month", DateTime.Now.Month.ToString());
+			lookup.Parameters.AddWithValue("@year", DateTime.Now.Year.ToString());
+			SqliteDataReader reader;
+			try
+			{
+				reader = lookup.ExecuteReader();
+			}
+			catch
+			{
+				m_dbConnection = _connection.CreateEmptyDatabase();
+				lookup = m_dbConnection.CreateCommand();
+				lookup.CommandText = "SELECT * FROM m_scc WHERE month like @month AND year like @year;";
+				lookup.Prepare();
+				lookup.Parameters.AddWithValue("@month", DateTime.Now.Month.ToString());
+				lookup.Parameters.AddWithValue("@year", DateTime.Now.Year.ToString());
+				reader = lookup.ExecuteReader();
+			}
+			float tally = 0;
+			while (reader.Read())
+			{
+				Console.WriteLine(reader["amount"].ToString());
+				tally += float.Parse(reader["amount"].ToString());
+			}
+            float budgetgoal = _connection.lookupsettings(m_dbConnection, "budget");
+			if (budgetgoal == 0)
+			{
+				Console.WriteLine("SCCSTATUS: Budget Is 0!");
+				
+			}
+			else
+			{
+				BudgetBar.Progress = tally / budgetgoal;
+				if (tally / budgetgoal >= 1)
+				{
+					this.View.BackgroundColor = UIColor.Red;
+					recent.BackgroundColor = UIColor.Red;
+				}
+                else
+                {
+					this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
+					recent.BackgroundColor = UIColor.Clear;
+                }
+			}
+        }
+		void LaunchDetail(string _id)
 		{
 			
 			Console.WriteLine("s"+Source.SelectedItem);

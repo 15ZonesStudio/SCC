@@ -19,6 +19,7 @@ namespace SCCiPhone
 	public class TableSource : UITableViewSource 
 	{
         public event EventHandler ItemSelected;
+        public event EventHandler ItemDeleted;
 		protected string[] TableItems;
 		protected string cellId = "TableCell";
 		protected string[] TableSubtitles;
@@ -145,6 +146,7 @@ namespace SCCiPhone
                         TableItemsLength -= 1;
 						tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
 						m_dbConnection.Close();
+                        ItemDeleted(this, EventArgs.Empty);
 						break;
 					}
 					else

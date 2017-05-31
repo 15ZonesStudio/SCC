@@ -5,6 +5,10 @@
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.pdb
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.xml
 /Users/liujack/Documents/GitHub/SCC/bin/iPhoneSimulator/Debug/OxyPlot.Xamarin.iOS.xml
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.csproj.CoreCompileInputs.cache
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.exe
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.pdb
+/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.csprojResolveAssemblyReference.cache
 /Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool/_BundleResourceWithLogicalName.items
 /Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/_PartialAppManifest.items
 /Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/_BundleResourceWithLogicalName.items
@@ -25,6 +29,3 @@
 /Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/optimized/Cart.png
 /Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/optimized/BackgroundGradiant.png
 /Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/optimized/
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.csproj.CoreCompileInputs.cache
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.exe
-/Users/liujack/Documents/GitHub/SCC/obj/iPhoneSimulator/Debug/SCCiPhone.pdb
