@@ -3,13 +3,14 @@
 This is an app that tracks and analyzes your financial transactions. The app's data is stored in a centralized SQlite Database that keeps track of user-entered strings that include the date, store and amount of purchase. The app will then use these data to help the user manage their budget thoughtfully.
 
 <h2>Features</h2>
+
 1. Track transactions and store them in a SQLite Database
 
 2. Comprehensive search on any data tracked with multiple parameters
 
 3. Create graphs and charts the helps the user further understand the data tracked
 
-4. Track spcific items bought and classify them into groups for later data review
+4. Track specific items bought and classify them into groups for later data review
 
 5. Allow user to set monthly budget and provide a visual warning when the budget has been exceeded
 
