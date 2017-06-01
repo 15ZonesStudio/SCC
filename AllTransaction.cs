@@ -1,4 +1,4 @@
-﻿using Foundation;
+﻿﻿using Foundation;
 using System;
 using UIKit;
 //using SQLitePCL;
@@ -20,8 +20,8 @@ namespace SCCiPhone
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-            try
-            {
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
+
                 ConnectionHandles _connection = new ConnectionHandles();
                 var filename = "";
                 var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -40,8 +40,9 @@ namespace SCCiPhone
 
                 int a;
                 float total = 0;
-                for (a = 1; a < Int32.Parse(r["_id"].ToString()); a = a + 1)
+                for (a = 1; a < Int32.Parse(r["_id"].ToString()); a++)
                 {
+                
                     SqliteDataReader s = _connection.lookupid(m_dbConnection, a);
                     float amount = float.Parse(s["amount"].ToString());
                     int day = Int32.Parse(s["day"].ToString());
@@ -54,6 +55,7 @@ namespace SCCiPhone
                     data[a] = label;
                     Ids[a] = a.ToString();
                     total += float.Parse(s["amount"].ToString());
+                
                 }
                 Tot.Text = "Total of all transactions: $" + total.ToString();
                 a = Int32.Parse(r["_id"].ToString());
@@ -69,13 +71,14 @@ namespace SCCiPhone
                 data[a] = labels;
                 Ids[a] = a.ToString();
                 tableView.Frame = new CoreGraphics.CGRect(5, 30, View.Bounds.Width, View.Bounds.Height - 30);
+                tableView.BackgroundColor = UIColor.Clear;
                 tableView.Source = new TableSource(data, SubData, tableView, Ids);
                 m_dbConnection.Close();
-            }
-            catch
-            {
+            
+
                 tableView.Frame = new CoreGraphics.CGRect(5, 30, View.Bounds.Width, View.Bounds.Height - 30);
-            }
+                tableView.BackgroundColor = UIColor.Clear;
+
 		}
     }
 }

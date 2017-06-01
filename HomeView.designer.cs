@@ -36,6 +36,10 @@ namespace SCCiPhone
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton SAButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton SearchBut { get; set; }
 
         [Outlet]
@@ -67,6 +71,11 @@ namespace SCCiPhone
             if (recent != null) {
                 recent.Dispose ();
                 recent = null;
+            }
+
+            if (SAButton != null) {
+                SAButton.Dispose ();
+                SAButton = null;
             }
 
             if (SearchBut != null) {

@@ -203,6 +203,10 @@
     <Compile Include="StorewiseUsageChart.designer.cs">
       <DependentUpon>StorewiseUsageChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Erase_DatabaseView.cs" />
+    <Compile Include="Erase_DatabaseView.designer.cs">
+      <DependentUpon>Erase_DatabaseView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delete-512.png" />
