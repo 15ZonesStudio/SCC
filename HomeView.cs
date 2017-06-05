@@ -113,9 +113,7 @@ namespace SCCiPhone
                 m_dbConnection.Close();
                 Source = new TableSource(LableTitle, LableDescription, recent, Ids);
             
-            CGAffineTransform transform = CGAffineTransform.MakeScale(1.0f, 0.25f);
-			Line.Transform = transform;
-            Lineo.Transform = transform;
+           
 			recent.Source = Source;
             Console.WriteLine(Source.SelectedItem);
             Source.ItemSelected += (object sender, EventArgs e) => LaunchDetail(Source.SelectedItem);
@@ -124,6 +122,9 @@ namespace SCCiPhone
             Console.WriteLine("hey");
 			}
 			catch { }
+			CGAffineTransform transform = CGAffineTransform.MakeScale(1.0f, 0.25f);
+			Line.Transform = transform;
+			Lineo.Transform = transform;
 
 		}
         void RefreshViewColor()
