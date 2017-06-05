@@ -9,9 +9,19 @@ namespace SCCiPhone
         public SetBudget (IntPtr handle) : base (handle)
         {
         }
-
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
+        }
+		public override void TouchesBegan(NSSet touches, UIEvent evt)
+		{
+			base.TouchesBegan(touches, evt);
+			View.EndEditing(true);
+		}
         partial void UIButton4554_TouchUpInside(UIButton sender)
         {
+            
 			ConnectionHandles _connection = new ConnectionHandles();
 			SqliteConnection m_dbConnection = _connection.CreateConnection();
 			m_dbConnection.Open();

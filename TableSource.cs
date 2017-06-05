@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using Foundation;
 using UIKit;
 //using SQLitePCL;
@@ -19,6 +19,7 @@ namespace SCCiPhone
 	public class TableSource : UITableViewSource 
 	{
         public event EventHandler ItemSelected;
+        public event EventHandler ItemDeleted;
 		protected string[] TableItems;
 		protected string cellId = "TableCell";
 		protected string[] TableSubtitles;
@@ -33,7 +34,7 @@ namespace SCCiPhone
 			TableItems = items;
 			TableSubtitles = subtitles;
             cellIds = _cellIds;
-            TableItemsLength = TableItems.Length;
+            TableItemsLength = items.Length;
 		}
 
 		public override nint RowsInSection(UITableView tableview, nint section)
@@ -43,31 +44,14 @@ namespace SCCiPhone
 
 		public override UITableViewCell GetCell(UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-            UITableViewCell cell = null;
-			if (cell == null)
-			{
-				if (sm)
-				{
-
-					cell = new UITableViewCell(UITableViewCellStyle.Default, cellIds[indexPath.Row]);
-
-				}
-				else
-				{
-					cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIds[indexPath.Row]);
-				}
-			}
-			if (sm)
-			{
-				cell.TextLabel.Text = TableItems[indexPath.Row];
-			}
-			else
-			{
-				cell.TextLabel.Text = TableItems[indexPath.Row];
-				cell.DetailTextLabel.Text = TableSubtitles[indexPath.Row];
-			}
-
-
+            Console.WriteLine("getCell");
+            UITableViewCell cell = tableView.DequeueReusableCell("AvalibleCell");
+		    cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIds[indexPath.Row]);
+            cell.BackgroundColor = UIColor.Clear;
+            cell.TextLabel.TextColor = UIColor.White;
+            cell.DetailTextLabel.TextColor = new UIColor(red: 0.49f, green: 0.56f, blue: 0.62f, alpha: 1.0f);
+			cell.TextLabel.Text = TableItems[indexPath.Row];
+			cell.DetailTextLabel.Text = TableSubtitles[indexPath.Row];
 			return cell;
 		}
         private string GetCellId(UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -94,11 +78,11 @@ namespace SCCiPhone
 		}
 		private void subtract(SqliteConnection connection)
 		{
-		//	string command = "DELETE FROM SQLITE_SEQUENCE WHERE name = 'm_scc';";
-			//
-		//	var update = connection.CreateCommand();
-		//	update.CommandText = command;
-		//	update.ExecuteNonQuery();
+			string command = "DELETE FROM SQLITE_SEQUENCE WHERE name = 'm_scc';";
+			
+			var update = connection.CreateCommand();
+			update.CommandText = command;
+			update.ExecuteNonQuery();
 		}
 		public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, Foundation.NSIndexPath indexPath)
 		{
@@ -113,7 +97,6 @@ namespace SCCiPhone
 						// delete the row from the table
 						var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 						var filename = Path.Combine(documents, "sccMain.sqlite");
-						//var filename = Path.Combine("/Users/liujack/Desktop/Dididi/sccMain.sqlite");
 						var m_dbConnection = new SqliteConnection("Data Source= " + filename + ";");
 						m_dbConnection.Open();
 						var flip = m_dbConnection.CreateCommand();
@@ -131,14 +114,14 @@ namespace SCCiPhone
 							lookup.CommandText = command;
 							lookup.ExecuteNonQuery();
 						}
-                        tableView.DequeueReusableCell(GetCellId(tableView, indexPath));
-
-
+                        var cell = tableView.DequeueReusableCell(GetCellId(tableView, indexPath));
+                        cell = new UITableViewCell(UITableViewCellStyle.Subtitle, "AvalibleCell");
 						subtract(m_dbConnection);
 						Refresh();
                         TableItemsLength -= 1;
 						tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
 						m_dbConnection.Close();
+                        ItemDeleted(this, EventArgs.Empty);
 						break;
 					}
 					else

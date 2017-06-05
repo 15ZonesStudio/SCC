@@ -79,7 +79,7 @@ namespace SCCiPhone
             var top5 = times.OrderByDescending(pair => pair.Value).Take(5);
 			foreach (KeyValuePair<string, int> entry in top5)
 			{
-                series.Items.Add(new ColumnItem(amounts[entry.Key]));
+                series.Items.Add(new ColumnItem(){ Value = amounts[entry.Key], Color = OxyColors.DarkOliveGreen });
                 XAxis.ActualLabels.Add(entry.Key);
 				
 			}
@@ -93,7 +93,9 @@ namespace SCCiPhone
 				Model = model,
 				Frame = new CGRect(this.View.Frame.X, this.View.Frame.Y + 50, this.View.Frame.Width, _frame - _frame / 2-100),
 			};
+            plotView.BackgroundColor = UIColor.Clear;
 			this.View.AddSubview(plotView);
+            this.View.BackgroundColor = UIColor.Clear;
 		}
 	}
 }

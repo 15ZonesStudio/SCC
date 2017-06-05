@@ -40,6 +40,10 @@ namespace SCCiPhone
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel tot { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField yr { get; set; }
 
         [Action ("Moved:")]
@@ -88,6 +92,11 @@ namespace SCCiPhone
             if (tableView != null) {
                 tableView.Dispose ();
                 tableView = null;
+            }
+
+            if (tot != null) {
+                tot.Dispose ();
+                tot = null;
             }
 
             if (yr != null) {

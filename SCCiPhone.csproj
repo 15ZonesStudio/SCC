@@ -108,16 +108,11 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 129.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x29.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x29.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x57.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 140.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x60.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 157.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x57.png" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%401.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -202,6 +197,10 @@
     <Compile Include="StorewiseUsageChart.designer.cs">
       <DependentUpon>StorewiseUsageChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Erase_DatabaseView.cs" />
+    <Compile Include="Erase_DatabaseView.designer.cs">
+      <DependentUpon>Erase_DatabaseView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delete-512.png" />
@@ -219,6 +218,7 @@
     <BundleResource Include="Resources\N.png" />
     <BundleResource Include="Resources\ShoppingCart.png" />
     <BundleResource Include="Resources\Cart.png" />
+    <BundleResource Include="Resources\BackgroundGradiant.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

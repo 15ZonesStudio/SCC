@@ -24,15 +24,7 @@ namespace SCCiPhone
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel month { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel store { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel year { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -46,19 +38,9 @@ namespace SCCiPhone
                 day = null;
             }
 
-            if (month != null) {
-                month.Dispose ();
-                month = null;
-            }
-
             if (store != null) {
                 store.Dispose ();
                 store = null;
-            }
-
-            if (year != null) {
-                year.Dispose ();
-                year = null;
             }
         }
     }

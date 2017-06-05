@@ -28,6 +28,7 @@ namespace SCCiPhone
                 //MinorGridlineStyle = LineStyle.Solid,
                 IsPanEnabled = false,
                 IsZoomEnabled = false,
+                MajorGridlineColor = OxyColor.FromRgb(19, 64, 68),
             };
 			XAxis.ActualLabels.Add("Jan");
 			XAxis.ActualLabels.Add("Feb");
@@ -75,7 +76,7 @@ namespace SCCiPhone
 
                 if (total == 0)
                 {
-                    series.Items.Add(new ColumnItem(0));
+                    series.Items.Add(new ColumnItem(){ Value = 0, Color = OxyColors.DarkOliveGreen });
                 }
                 else
                 {
@@ -83,7 +84,7 @@ namespace SCCiPhone
                     {
                         maxAmount = total;
                     }
-                    series.Items.Add(new ColumnItem(total));
+                    series.Items.Add(new ColumnItem(){ Value = total, Color = OxyColors.DarkOliveGreen });
                 }
 
 				
@@ -93,13 +94,15 @@ namespace SCCiPhone
             model.Axes.Add(XAxis);
             model.Series.Add(series);
             Console.WriteLine("Frame:" + _frame + "| Deft:" + this.View.Frame.Height);
+
             var plotView = new PlotView
             {
                 Model = model,
                 Frame = new CGRect(this.View.Frame.X, this.View.Frame.Y, this.View.Frame.Width, _frame - _frame/2-50),
 			};
-
+            plotView.BackgroundColor = UIColor.Clear;
 			this.View.AddSubview(plotView);
+            this.View.BackgroundColor = UIColor.Clear;
         }
     }
 }
