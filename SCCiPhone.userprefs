@@ -1,20 +1,21 @@
 ﻿<Properties StartupConfiguration="{35FC026F-C9E0-43F2-AFA8-C722F2267197}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="SCC Status">
     <Files>
-      <File FileName="HomeView.cs" Line="115" Column="38" />
-      <File FileName="StorewiseUsageChart.cs" Line="67" Column="1" />
-      <File FileName="Main.cs" Line="12" Column="1" />
-      <File FileName="NewTransaction.cs" Line="59" Column="52" />
-      <File FileName="AllTransaction.cs" Line="49" Column="45" />
-      <File FileName="TableSource.cs" Line="110" Column="24" />
+      <File FileName="MonthlyUsageChart.cs" Line="96" Column="87" />
+      <File FileName="StorewiseUsageChart.cs" Line="82" Column="55" />
+      <File FileName="Info.plist" />
       <File FileName="V2.storyboard" />
-      <File FileName="Erase_DatabaseView.cs" Line="35" Column="9" />
+      <File FileName="SetBudget.cs" Line="18" Column="4" />
+      <File FileName="Search.cs" Line="56" Column="3" />
+      <File FileName="Erase_DatabaseView.cs" Line="38" Column="1" />
       <File FileName="SCC Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/liujack/Documents/GitHub/SCC/AllTransaction.cs" relfile="AllTransaction.cs" line="46" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.SCCiPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8320C3C3-5B43-4926-8CD1-6EB80384884E" />

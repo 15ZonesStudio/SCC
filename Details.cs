@@ -13,6 +13,7 @@ namespace SCCiPhone
 		public override void ViewDidLoad()
 		{
             //ser
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
 			base.ViewDidLoad();
 			ConnectionHandles _connection = new ConnectionHandles();
 			SqliteConnection m_dbConnection = _connection.CreateConnection();
@@ -21,10 +22,8 @@ namespace SCCiPhone
 			var r = _connection.lookupid(m_dbConnection, Int32.Parse(id));
 			Console.WriteLine(r["store"].ToString());
 			store.Text = r["store"].ToString();
-			day.Text = r["day"].ToString();
-			amount.Text = float.Parse(r["amount"].ToString()).ToString();
-			month.Text = r["month"].ToString();
-			year.Text = r["year"].ToString();
+            amount.Text = r["amount"].ToString();
+            day.Text = r["month"].ToString() + "/" + r["day"].ToString() + "/" + r["year"].ToString();
 		}
     }
 }

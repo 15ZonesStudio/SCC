@@ -34,7 +34,7 @@ namespace SCCiPhone
 			TableItems = items;
 			TableSubtitles = subtitles;
             cellIds = _cellIds;
-            TableItemsLength = TableItems.Length;
+            TableItemsLength = items.Length;
 		}
 
 		public override nint RowsInSection(UITableView tableview, nint section)
@@ -44,7 +44,8 @@ namespace SCCiPhone
 
 		public override UITableViewCell GetCell(UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-            UITableViewCell cell = null;
+            Console.WriteLine("getCell");
+            UITableViewCell cell = tableView.DequeueReusableCell("AvalibleCell");
 		    cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIds[indexPath.Row]);
             cell.BackgroundColor = UIColor.Clear;
             cell.TextLabel.TextColor = UIColor.White;
@@ -113,7 +114,8 @@ namespace SCCiPhone
 							lookup.CommandText = command;
 							lookup.ExecuteNonQuery();
 						}
-                        tableView.DequeueReusableCell(GetCellId(tableView, indexPath));
+                        var cell = tableView.DequeueReusableCell(GetCellId(tableView, indexPath));
+                        cell = new UITableViewCell(UITableViewCellStyle.Subtitle, "AvalibleCell");
 						subtract(m_dbConnection);
 						Refresh();
                         TableItemsLength -= 1;

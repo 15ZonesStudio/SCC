@@ -75,35 +75,44 @@ namespace SCCiPhone
                 }
             }
             amt.Text = "Budget: $" + budgetgoal;
-			string[] LableTitle = new string[50];
-			string[] LableDescription = new string[50];
-            string[] Ids = new string[50];
-			var flip = m_dbConnection.CreateCommand();
-			flip.CommandText = "SELECT * FROM m_scc ORDER BY _id DESC";
-			var r = flip.ExecuteReader();
-			int times = 1;
-			try
-			{
-				while (times < 51)
-				{
-					r.Read();
-					float amount = float.Parse(r["amount"].ToString());
-					int day = Int32.Parse(r["day"].ToString());
-					int month = Int32.Parse(r["month"].ToString());
-					int year = Int32.Parse(r["year"].ToString());
-					string store = r["store"].ToString();
-					string label = store + " | $" + amount.ToString();
-					string subLabel = month.ToString() + "/" + day.ToString() + "/" + year.ToString();
-					LableTitle[times-1] = label;
-					LableDescription[times-1] = subLabel;
-                    Ids[times-1] = r["_id"].ToString();
-					times++;
-				}
-			}
+			var id = m_dbConnection.CreateCommand();
+			id.CommandText = "SELECT * FROM m_scc ORDER BY _id DESC LIMIT 1";
+			var es = id.ExecuteReader();
+			es.Read();
+            try
+            {
+                string[] LableTitle = new string[Int32.Parse(es["_id"].ToString())];
+                string[] LableDescription = new string[Int32.Parse(es["_id"].ToString())];
+                string[] Ids = new string[Int32.Parse(es["_id"].ToString())];
 
-			catch { }
-			m_dbConnection.Close();
-			Source = new TableSource(LableTitle, LableDescription, recent,Ids);
+
+                var flip = m_dbConnection.CreateCommand();
+                flip.CommandText = "SELECT * FROM m_scc ORDER BY _id DESC";
+                var r = flip.ExecuteReader();
+                int times = 1;
+                try
+                {
+                    while (times < 51)
+                    {
+                        r.Read();
+                        float amount = float.Parse(r["amount"].ToString());
+                        int day = Int32.Parse(r["day"].ToString());
+                        int month = Int32.Parse(r["month"].ToString());
+                        int year = Int32.Parse(r["year"].ToString());
+                        string store = r["store"].ToString();
+                        string label = store + " | $" + amount.ToString();
+                        string subLabel = month.ToString() + "/" + day.ToString() + "/" + year.ToString();
+                        LableTitle[times - 1] = label;
+                        LableDescription[times - 1] = subLabel;
+                        Ids[times - 1] = r["_id"].ToString();
+                        times++;
+                    }
+                }
+
+                catch { }
+                m_dbConnection.Close();
+                Source = new TableSource(LableTitle, LableDescription, recent, Ids);
+            
             CGAffineTransform transform = CGAffineTransform.MakeScale(1.0f, 0.25f);
 			Line.Transform = transform;
             Lineo.Transform = transform;
@@ -113,6 +122,8 @@ namespace SCCiPhone
 			Source.ItemDeleted += (object sender, EventArgs e) => RefreshViewColor();
             Console.WriteLine(Source.SelectedItem);
             Console.WriteLine("hey");
+			}
+			catch { }
 
 		}
         void RefreshViewColor()

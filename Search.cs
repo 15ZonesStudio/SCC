@@ -17,6 +17,7 @@ namespace SCCiPhone
 
         public override void ViewDidLoad()
         {
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var filename = Path.Combine(documents, "sccMain.sqlite");
             var m_dbConnection = new SqliteConnection("Data Source= " + filename + ";");
@@ -64,6 +65,9 @@ namespace SCCiPhone
 			month.Text = "";
             Current.Text = "Any";
             amountSlider.SetValue(0, false);
+            tot.Text = "";
+            tableView.Source = new TableSource(new string[] { "" }, new string[] { "" }, tableView, new string[] { "0" });
+            tableView.ReloadData();
         }
 
         partial void UIButton5738_TouchUpInside(UIButton sender)
@@ -216,6 +220,7 @@ namespace SCCiPhone
             string[] SubData = new string[lendata];
             string[] ids = new string[lendata];
             int subsidery = 0;
+            float total = 0;
             while (reader.Read())
             {
                 Console.WriteLine("read!");
@@ -230,10 +235,12 @@ namespace SCCiPhone
                 string subLabel = month.ToString() + "/" + day.ToString() + "/" + year.ToString();
                 SubData[subsidery] = subLabel;
                 data[subsidery] = label;
-                subsidery += 1; 
+                subsidery += 1;
+                total += float.Parse(reader["amount"].ToString());
             }
-            table = new TableSource(data, SubData, tableView,ids);
+            table = new TableSource(data, SubData, tableView, ids);
             tableView.Source = table;
+            tot.Text = "Total of searched transaction: $"+total;
         //    lab1.Text = "You spent a total of $" + totastore.ToString() + " with specified parameters";
             tableView.ReloadData();
             m_dbConnection.Close();

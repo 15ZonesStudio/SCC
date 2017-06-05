@@ -108,17 +108,11 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 129.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x29.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x29.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x57.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 140.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x60.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 157.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403x57.png" />
     <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%401.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%403.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

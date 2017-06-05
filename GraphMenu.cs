@@ -17,6 +17,7 @@ namespace SCCiPhone
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
             MonthlyGraphContainer.Frame = new CGRect(View.Frame.X, View.Frame.Y + 50, View.Frame.Width, View.Frame.Height / 2);
             StorelyGraphContainer.Frame = new CGRect(View.Frame.X, View.Frame.Y + View.Frame.Height / 2, View.Frame.Width, View.Frame.Height / 2-50);
         }

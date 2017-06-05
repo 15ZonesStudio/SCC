@@ -15,7 +15,11 @@ namespace SCCiPhone
         public NewTransaction (IntPtr handle) : base (handle)
         {
         }
-
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("BackgroundGradiant.png"));
+        }
 		partial void DayChanged(UITextField sender)
 		{
 			day.Text = DayInput.Text;
