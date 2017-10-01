@@ -21,6 +21,7 @@
 		58BD5EF31F6614870047FD30 /* ManagedDatabaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BD5EF21F6614870047FD30 /* ManagedDatabaseModule.swift */; };
 		58C147971F6444F1000EAA97 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C147961F6444F1000EAA97 /* TransactionTableViewCell.swift */; };
 		58C147991F644670000EAA97 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C147981F644670000EAA97 /* TableViewController.swift */; };
+		58F710621F8155870055D48F /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 58F710611F8155870055D48F /* .travis.yml */; };
 		58FF0F871F64759D0083E318 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */; };
 		F392951B1E3D1E4074EED942 /* Pods_SCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E289D39A343E0F61C72F3DC /* Pods_SCC.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		58BD5EF21F6614870047FD30 /* ManagedDatabaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedDatabaseModule.swift; sourceTree = "<group>"; };
 		58C147961F6444F1000EAA97 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		58C147981F644670000EAA97 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		58F710611F8155870055D48F /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
 		DAA42E3362AC9D2CFF35DB53 /* Pods-SCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCC/Pods-SCC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 		58BBA99F1F5DDCEB00E03E30 = {
 			isa = PBXGroup;
 			children = (
+				58F710611F8155870055D48F /* .travis.yml */,
 				58BBA9AA1F5DDCEB00E03E30 /* SCC */,
 				58BBA9A91F5DDCEB00E03E30 /* Products */,
 				640A8A711757848718BDE040 /* Pods */,
@@ -197,6 +200,7 @@
 			files = (
 				58BBA9B91F5DDCEB00E03E30 /* LaunchScreen.storyboard in Resources */,
 				58BBA9B61F5DDCEB00E03E30 /* Assets.xcassets in Resources */,
+				58F710621F8155870055D48F /* .travis.yml in Resources */,
 				58BBA9B11F5DDCEB00E03E30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +253,7 @@
 				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -258,6 +263,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

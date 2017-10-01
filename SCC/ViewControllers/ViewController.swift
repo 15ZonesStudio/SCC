@@ -12,6 +12,8 @@ import MaterialComponents
 import UIColor_Hex_Swift
 import CoreData
 
+import SideMenu
+
 extension UIApplication {
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
@@ -31,9 +33,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Handle side menu
+        SideMenuManager.menuPresentMode = .menuSlideIn
+        SideMenuManager.menuPushStyle = .replace
+        
         // Testing by setting the budget to 10,000 bucks
         let userDefaults = UserDefaults.standard
-        userDefaults.set(10000, forKey: "budget")
         
         // Get current month
         let date = Date()
@@ -44,6 +49,7 @@ class ViewController: UIViewController {
         formatter.dateFormat = "yyyy"
         let yresult = formatter.string(from: date)
         
+        // Look that up in the DB
         let databaseModuleInstance = DatabaseModule()
         let fetchedData = databaseModuleInstance.GetDataWithParams(Month: mresult, Year: yresult, Store: nil, Amount: nil)
         
@@ -63,12 +69,14 @@ class ViewController: UIViewController {
         
         if currentMonth != nil
         {
-            currentMonth.text = Date().monthFull+":"
+            currentMonth.text = "Total in "+Date().monthFull+":"
         }
         
+        // Look up the user's budget
         let budget = userDefaults.float(forKey: "budget")
         let percentage:Float = total/budget
         
+        // Set the budget bar
         if budgetBar != nil
         {
             budgetBar.setProgress(percentage, animated: true)
@@ -82,6 +90,7 @@ class ViewController: UIViewController {
         {
             budgetPercent.text = String(round(100*percentage))+"% of "+numberFormatter.string(from: budgetNSNum)!
         }
+        
         
         
     }
