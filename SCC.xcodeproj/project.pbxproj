@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		585074F01F677E9E007F024F /* GraphPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074EF1F677E9E007F024F /* GraphPageController.swift */; };
+		585074F21F677F41007F024F /* MonthlyTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074F11F677F41007F024F /* MonthlyTransactionVC.swift */; };
+		585074F41F677F86007F024F /* StorewiseTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074F31F677F86007F024F /* StorewiseTransactionVC.swift */; };
+		585074F61F677FAF007F024F /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074F51F677FAF007F024F /* ScrollableGraphView.swift */; };
+		585074F81F67815C007F024F /* EmbededExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074F71F67815C007F024F /* EmbededExtensions.swift */; };
 		58BBA9AC1F5DDCEB00E03E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA9AB1F5DDCEB00E03E30 /* AppDelegate.swift */; };
 		58BBA9AE1F5DDCEB00E03E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */; };
 		58BBA9B11F5DDCEB00E03E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BBA9AF1F5DDCEB00E03E30 /* Main.storyboard */; };
 		58BBA9B41F5DDCEB00E03E30 /* SCC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA9B21F5DDCEB00E03E30 /* SCC.xcdatamodeld */; };
 		58BBA9B61F5DDCEB00E03E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58BBA9B51F5DDCEB00E03E30 /* Assets.xcassets */; };
 		58BBA9B91F5DDCEB00E03E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BBA9B71F5DDCEB00E03E30 /* LaunchScreen.storyboard */; };
+		58BD5EF31F6614870047FD30 /* ManagedDatabaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BD5EF21F6614870047FD30 /* ManagedDatabaseModule.swift */; };
+		58C147971F6444F1000EAA97 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C147961F6444F1000EAA97 /* TransactionTableViewCell.swift */; };
+		58C147991F644670000EAA97 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C147981F644670000EAA97 /* TableViewController.swift */; };
+		58FF0F871F64759D0083E318 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */; };
+		F392951B1E3D1E4074EED942 /* Pods_SCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E289D39A343E0F61C72F3DC /* Pods_SCC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DE236E5F16EAAF53EEF7A04 /* Pods-SCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SCC/Pods-SCC.debug.xcconfig"; sourceTree = "<group>"; };
+		4E289D39A343E0F61C72F3DC /* Pods_SCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		585074EF1F677E9E007F024F /* GraphPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPageController.swift; sourceTree = "<group>"; };
+		585074F11F677F41007F024F /* MonthlyTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTransactionVC.swift; sourceTree = "<group>"; };
+		585074F31F677F86007F024F /* StorewiseTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorewiseTransactionVC.swift; sourceTree = "<group>"; };
+		585074F51F677FAF007F024F /* ScrollableGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableGraphView.swift; sourceTree = "<group>"; };
+		585074F71F67815C007F024F /* EmbededExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededExtensions.swift; sourceTree = "<group>"; };
 		58BBA9A81F5DDCEB00E03E30 /* SCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BBA9AB1F5DDCEB00E03E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +41,11 @@
 		58BBA9B51F5DDCEB00E03E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58BBA9B81F5DDCEB00E03E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58BBA9BA1F5DDCEB00E03E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58BD5EF21F6614870047FD30 /* ManagedDatabaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedDatabaseModule.swift; sourceTree = "<group>"; };
+		58C147961F6444F1000EAA97 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		58C147981F644670000EAA97 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
+		DAA42E3362AC9D2CFF35DB53 /* Pods-SCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCC/Pods-SCC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F392951B1E3D1E4074EED942 /* Pods_SCC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,8 @@
 			children = (
 				58BBA9AA1F5DDCEB00E03E30 /* SCC */,
 				58BBA9A91F5DDCEB00E03E30 /* Products */,
+				640A8A711757848718BDE040 /* Pods */,
+				E658361650F8505F09D92F0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				58BBA9AB1F5DDCEB00E03E30 /* AppDelegate.swift */,
-				58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */,
+				58BD5EF21F6614870047FD30 /* ManagedDatabaseModule.swift */,
+				585074F51F677FAF007F024F /* ScrollableGraphView.swift */,
+				585074F71F67815C007F024F /* EmbededExtensions.swift */,
+				58BD5EEC1F660D040047FD30 /* Data Sources */,
+				58BD5EED1F660D100047FD30 /* ViewControllers */,
 				58BBA9AF1F5DDCEB00E03E30 /* Main.storyboard */,
 				58BBA9B51F5DDCEB00E03E30 /* Assets.xcassets */,
 				58BBA9B71F5DDCEB00E03E30 /* LaunchScreen.storyboard */,
@@ -67,6 +96,44 @@
 			path = SCC;
 			sourceTree = "<group>";
 		};
+		58BD5EEC1F660D040047FD30 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				58C147981F644670000EAA97 /* TableViewController.swift */,
+				58C147961F6444F1000EAA97 /* TransactionTableViewCell.swift */,
+				585074EF1F677E9E007F024F /* GraphPageController.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		58BD5EED1F660D100047FD30 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				585074F31F677F86007F024F /* StorewiseTransactionVC.swift */,
+				58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */,
+				585074F11F677F41007F024F /* MonthlyTransactionVC.swift */,
+				58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		640A8A711757848718BDE040 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DE236E5F16EAAF53EEF7A04 /* Pods-SCC.debug.xcconfig */,
+				DAA42E3362AC9D2CFF35DB53 /* Pods-SCC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E658361650F8505F09D92F0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E289D39A343E0F61C72F3DC /* Pods_SCC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58BBA9BD1F5DDCEB00E03E30 /* Build configuration list for PBXNativeTarget "SCC" */;
 			buildPhases = (
+				2BA4F38ADD93B288BF88CEBC /* [CP] Check Pods Manifest.lock */,
 				58BBA9A41F5DDCEB00E03E30 /* Sources */,
 				58BBA9A51F5DDCEB00E03E30 /* Frameworks */,
 				58BBA9A61F5DDCEB00E03E30 /* Resources */,
+				B1E996DC8B5CCC15C8C624A1 /* [CP] Embed Pods Frameworks */,
+				17CBB7D1B698E7A070EB4BC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -95,7 +165,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = "Shabang LLC";
+				ORGANIZATIONNAME = "Shabang Systems, LLC";
 				TargetAttributes = {
 					58BBA9A71F5DDCEB00E03E30 = {
 						CreatedOnToolsVersion = 9.0;
@@ -133,13 +203,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17CBB7D1B698E7A070EB4BC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCC/Pods-SCC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BA4F38ADD93B288BF88CEBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SCC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1E996DC8B5CCC15C8C624A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SCC/Pods-SCC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCC/Pods-SCC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58BBA9A41F5DDCEB00E03E30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				58BBA9AE1F5DDCEB00E03E30 /* ViewController.swift in Sources */,
+				58C147991F644670000EAA97 /* TableViewController.swift in Sources */,
+				58FF0F871F64759D0083E318 /* NewTransactionViewController.swift in Sources */,
 				58BBA9AC1F5DDCEB00E03E30 /* AppDelegate.swift in Sources */,
+				585074F01F677E9E007F024F /* GraphPageController.swift in Sources */,
+				58C147971F6444F1000EAA97 /* TransactionTableViewCell.swift in Sources */,
+				585074F41F677F86007F024F /* StorewiseTransactionVC.swift in Sources */,
+				585074F21F677F41007F024F /* MonthlyTransactionVC.swift in Sources */,
+				585074F81F67815C007F024F /* EmbededExtensions.swift in Sources */,
+				585074F61F677FAF007F024F /* ScrollableGraphView.swift in Sources */,
+				58BD5EF31F6614870047FD30 /* ManagedDatabaseModule.swift in Sources */,
 				58BBA9B41F5DDCEB00E03E30 /* SCC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,12 +418,13 @@
 		};
 		58BBA9BE1F5DDCEB00E03E30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE236E5F16EAAF53EEF7A04 /* Pods-SCC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TEPY3US76;
 				INFOPLIST_FILE = SCC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Shabang.SCC;
+				PRODUCT_BUNDLE_IDENTIFIER = cf.15zonesstudio.ShoppingControlCenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,12 +433,13 @@
 		};
 		58BBA9BF1F5DDCEB00E03E30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA42E3362AC9D2CFF35DB53 /* Pods-SCC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TEPY3US76;
 				INFOPLIST_FILE = SCC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Shabang.SCC;
+				PRODUCT_BUNDLE_IDENTIFIER = cf.15zonesstudio.ShoppingControlCenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

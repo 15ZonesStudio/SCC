@@ -3,7 +3,7 @@
 //  SCC
 //
 //  Created by Jack Liu on 9/4/17.
-//  Copyright © 2017 Shabang LLC. All rights reserved.
+//  Copyright © 2017 Shabang Systems, LLC. All rights reserved.
 //
 
 import UIKit
