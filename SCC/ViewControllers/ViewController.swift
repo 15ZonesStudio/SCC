@@ -68,13 +68,20 @@ class ViewController: UIViewController {
         
         let budget = userDefaults.float(forKey: "budget")
         let percentage:Float = total/budget
-        budgetBar.setProgress(percentage, animated: true)
+        
+        if budgetBar != nil
+        {
+            budgetBar.setProgress(percentage, animated: true)
+        }
         
         let budgetNSNum: NSNumber = budget as NSNumber
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         
-        budgetPercent.text = String(round(100*percentage))+"% of "+numberFormatter.string(from: budgetNSNum)!
+        if budgetPercent != nil
+        {
+            budgetPercent.text = String(round(100*percentage))+"% of "+numberFormatter.string(from: budgetNSNum)!
+        }
         
         
     }
