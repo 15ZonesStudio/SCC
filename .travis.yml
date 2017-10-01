@@ -1,4 +1,3 @@
 language: swift
 xcode_project: SCC.xcodeproj
-podfile: podfile
 os: ios
