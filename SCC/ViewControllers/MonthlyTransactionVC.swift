@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 class MonthlyTransactionVC : UIViewController
 {
     @IBOutlet var ContainerView: UIView!
@@ -20,12 +21,8 @@ class MonthlyTransactionVC : UIViewController
             graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if graphView == nil
-        {
-            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-25))
-        }
+    @objc let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    func loadGraph() {
         let plotData = DatabaseModule().GetData()
         var months:[Int : Double]  = [
             1: 0.0,
@@ -97,11 +94,33 @@ class MonthlyTransactionVC : UIViewController
         
         graphView.shouldRangeAlwaysStartAtZero = true
         
+        graphView.leftmostPointPadding = 65
+        
         //Set the range
         let sortedValues = months.values.sorted(by: >)
         graphView.rangeMax = sortedValues[0]+(sortedValues[0]/2)
         graphView.set(data: data, withLabels:labels)
         ContainerView.addSubview(graphView)
     }
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(managedObjectContextObjectsDidChange), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
+        
+        if graphView == nil
+        {
+            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-25))
+        }
+        loadGraph()
+    }
+    @objc func managedObjectContextObjectsDidChange(notification: NSNotification)
+    {
+        print("hey")
+        loadGraph()
+        loadGraph()
+        loadGraph()
+        loadGraph()
+        loadGraph()
+        print("hey")
+    }
 }

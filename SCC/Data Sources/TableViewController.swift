@@ -16,6 +16,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // Data model: These strings will be the data for the table view cells
     public var data: [Transaction] = []
     
+    // Length of data
+    public var dataLength: Int = 0
+    
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "cell"
     
@@ -34,6 +37,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }catch{
             print("SCCERROR: Could not fetch data")
         }
+        
+        // Reverse the data array
+        data.reverse()
+        
+        // Get the length of data
+        dataLength = data.count
+        
         // Register the table view cell class and its reuse id
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
@@ -44,7 +54,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.dataLength
     }
     
     // create a cell for each table view row
@@ -66,5 +76,17 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // method to delete data
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let dbModule = DatabaseModule()
+            dbModule.DeleteData(Data: data, At: indexPath.row)
+            self.dataLength -= 1
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.reloadData()
+        
+        }
     }
 }
