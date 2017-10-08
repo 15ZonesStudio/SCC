@@ -75,22 +75,25 @@ class DatabaseModule
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Transaction")
         var data: [Transaction] = []
+        var predicates: [NSPredicate] = []
         if let _month = month
         {
-            fetchRequest.predicate = NSPredicate(format: "month == %@", NSNumber(value: Int(_month)!))
+            predicates.append(NSPredicate(format: "month == %@", NSNumber(value: Int(_month)!)))
         }
         if let _store = store
         {
-            fetchRequest.predicate = NSPredicate(format: "store == %@", NSNumber(value: Int(_store)!))
+             predicates.append(NSPredicate(format: "store == %@", NSNumber(value: Int(_store)!)))
         }
         if let _year = year
         {
-            fetchRequest.predicate = NSPredicate(format: "year == %@", NSNumber(value: Int(_year)!))
+             predicates.append(NSPredicate(format: "year == %@", NSNumber(value: Int(_year)!)))
         }
         if let _amount = amount
         {
-            fetchRequest.predicate = NSPredicate(format: "amount"+_amount)
+            predicates.append(NSPredicate(format: "amount"+_amount))
         }
+        let finalPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        fetchRequest.predicate = finalPredicate
         do
         {
             data = try context.fetch(fetchRequest) as! [Transaction]

@@ -112,9 +112,9 @@
 		58BD5EED1F660D100047FD30 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				585074F11F677F41007F024F /* MonthlyTransactionVC.swift */,
 				585074F31F677F86007F024F /* StorewiseTransactionVC.swift */,
 				58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */,
-				585074F11F677F41007F024F /* MonthlyTransactionVC.swift */,
 				58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */,
 			);
 			path = ViewControllers;

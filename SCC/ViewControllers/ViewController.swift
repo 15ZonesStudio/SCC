@@ -28,15 +28,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentMonth: UILabel!
     @IBOutlet weak var budgetBar: UIProgressView!
     @IBOutlet weak var budgetPercent: UILabel!
+    @objc let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Handle side menu
-        SideMenuManager.menuPresentMode = .menuSlideIn
-        SideMenuManager.menuPushStyle = .replace
-        
+    @objc func setBudgetArea() {
         // Testing by setting the budget to 10,000 bucks
         let userDefaults = UserDefaults.standard
         
@@ -90,10 +84,23 @@ class ViewController: UIViewController {
         {
             budgetPercent.text = String(round(100*percentage))+"% of "+numberFormatter.string(from: budgetNSNum)!
         }
-        
-        
-        
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Handle side menu
+        SideMenuManager.menuPresentMode = .menuSlideIn
+        SideMenuManager.menuPushStyle = .replace
+        
+        // Set the budget area
+        setBudgetArea()
+        
+        // Listen for any DB events and reset the budget area
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(setBudgetArea), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
+    }
+
 
 
 }

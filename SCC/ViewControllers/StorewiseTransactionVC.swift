@@ -13,6 +13,7 @@ class StorewiseTransactionVC : UIViewController
     var bottomMargin = 25
     var graphView: ScrollableGraphView! = nil
     @IBOutlet var ContainerView: UIView!
+    @objc let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     func findKeyForValue(value: Double, dictionary: [String : Double]) ->String?
     {
         for i in dictionary
@@ -64,12 +65,8 @@ class StorewiseTransactionVC : UIViewController
             graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if graphView == nil
-        {
-            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-25))
-        }
+    func loadGraph()
+    {
         let plotData = DatabaseModule().GetData()
         var stores:[String : Double]  = [:]
         var times:[String: Double] = [:]
@@ -142,6 +139,27 @@ class StorewiseTransactionVC : UIViewController
         graphView.rangeMax = sortedValues[0]+(sortedValues[0]/2)
         graphView.set(data: data, withLabels:labs)
         ContainerView.addSubview(graphView)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(managedObjectContextObjectsDidChange), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
+        if graphView == nil
+        {
+            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-25))
+        }
+        loadGraph()
+    }
+    @objc func managedObjectContextObjectsDidChange(notification: NSNotification)
+    {
+        let subViews = ContainerView.subviews
+        for subview in subViews{
+            subview.removeFromSuperview()
+        }
+        loadGraph()
+        self.view.backgroundColor = UIColor.white
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
     }
     
 }

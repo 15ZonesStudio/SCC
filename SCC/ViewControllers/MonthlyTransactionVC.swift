@@ -22,6 +22,7 @@ class MonthlyTransactionVC : UIViewController
         }
     }
     @objc let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     func loadGraph() {
         let plotData = DatabaseModule().GetData()
         var months:[Int : Double]  = [
@@ -102,6 +103,7 @@ class MonthlyTransactionVC : UIViewController
         graphView.set(data: data, withLabels:labels)
         ContainerView.addSubview(graphView)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let notificationCenter = NotificationCenter.default
@@ -113,14 +115,16 @@ class MonthlyTransactionVC : UIViewController
         }
         loadGraph()
     }
+    
     @objc func managedObjectContextObjectsDidChange(notification: NSNotification)
     {
-        print("hey")
+        let subViews = ContainerView.subviews
+        for subview in subViews{
+            subview.removeFromSuperview()
+        }
         loadGraph()
-        loadGraph()
-        loadGraph()
-        loadGraph()
-        loadGraph()
-        print("hey")
+        self.view.backgroundColor = UIColor.white
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
     }
 }
