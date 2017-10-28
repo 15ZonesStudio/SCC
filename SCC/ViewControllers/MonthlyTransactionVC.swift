@@ -111,7 +111,7 @@ class MonthlyTransactionVC : UIViewController
         
         if graphView == nil
         {
-            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-25))
+            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-20))
         }
         loadGraph()
     }

@@ -92,7 +92,7 @@ class StorewiseTransactionVC : UIViewController
         let mapped = mapFromValues(sortedTms, Dictionary: times)
         let sortedDict = mapFromKeys(Array(mapped.keys), Dictionary: stores)
         var data: [Double] = []
-        for i in sortedDict
+        for i in sortedDict.prefix(5)
         {
             data.append(i.value)
         }
@@ -131,6 +131,7 @@ class StorewiseTransactionVC : UIViewController
         graphView.shouldAnimateOnStartup = true
         graphView.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
         graphView.animationDuration = 1.5
+        graphView.dataPointSpacing = 50
         
         graphView.shouldRangeAlwaysStartAtZero = true
         
@@ -146,7 +147,7 @@ class StorewiseTransactionVC : UIViewController
         notificationCenter.addObserver(self, selector: #selector(managedObjectContextObjectsDidChange), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
         if graphView == nil
         {
-            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-25))
+            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-20))
         }
         loadGraph()
     }

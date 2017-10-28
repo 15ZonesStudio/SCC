@@ -194,3 +194,19 @@ extension Date {
     var minute0x: String     { return Formatter.minute0x.string(from: self) }
     var amPM: String         { return Formatter.amPM.string(from: self) }
 }
+extension UIViewController
+{
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+}

@@ -9,5 +9,6 @@ target 'SCC' do
   pod 'MaterialComponents'
   pod 'UIColor_Hex_Swift', '~> 3.0.2'
   pod 'SideMenu'
+  pod 'lottie-ios'
   
 end
