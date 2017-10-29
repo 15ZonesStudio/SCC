@@ -1,9 +1,11 @@
 //
-//  Embeded Extensions.swift
+//  ScrollableGraphView.swift
 //  SCC
 //
-//  Created by Jack Liu on 9/11/17.
-//  Copyright © 2017 Shabang Systems, LLC. All rights reserved.
+//  Library used under the MIT License
+//
+//  Copyright (c) 2016 Phillip
+//
 //
 
 import Foundation

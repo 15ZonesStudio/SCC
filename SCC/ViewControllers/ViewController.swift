@@ -68,21 +68,43 @@ class ViewController: UIViewController {
         
         // Look up the user's budget
         let budget = userDefaults.float(forKey: "budget")
+        
+        
+        
         let percentage:Float = total/budget
-        
-        // Set the budget bar
-        if budgetBar != nil
+        if !percentage.isNaN && !percentage.isInfinite
         {
-            budgetBar.setProgress(percentage, animated: true)
+            // Set the budget bar
+            if budgetBar != nil
+            {
+                budgetBar.setProgress(percentage, animated: true)
+            }
+            
+            let budgetNSNum: NSNumber = budget as NSNumber
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .currency
+            
+            if budgetPercent != nil
+            {
+                budgetPercent.text = String(round(100*percentage))+"% of "+numberFormatter.string(from: budgetNSNum)!
+            }
         }
-        
-        let budgetNSNum: NSNumber = budget as NSNumber
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        
-        if budgetPercent != nil
+        else
         {
-            budgetPercent.text = String(round(100*percentage))+"% of "+numberFormatter.string(from: budgetNSNum)!
+            // Set the budget bar
+            if budgetBar != nil
+            {
+                budgetBar.setProgress(0, animated: true)
+            }
+            
+            // Set empty percentage
+            if budgetPercent != nil
+            {
+                let budgetNSNum: NSNumber = budget as NSNumber
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .currency
+                budgetPercent.text = "0.00% of "+numberFormatter.string(from: budgetNSNum)!
+            }
         }
     }
     
