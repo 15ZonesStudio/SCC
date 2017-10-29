@@ -123,8 +123,8 @@ class MonthlyTransactionVC : UIViewController
             subview.removeFromSuperview()
         }
         loadGraph()
-        self.view.backgroundColor = UIColor.white
         self.view.setNeedsDisplay()
         self.view.setNeedsLayout()
+        self.view.backgroundColor = UIColor.colorFromHex("#333333")
     }
 }

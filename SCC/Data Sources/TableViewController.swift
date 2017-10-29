@@ -85,7 +85,20 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             dbModule.DeleteData(Data: data, At: indexPath.row)
             self.dataLength -= 1
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.tableView.reloadData()
+            
+            // Re-fetch and reload the data form database
+            // Fetch the transaction data from CoreData
+            let fetchRequest: NSFetchRequest<Transaction> = Transaction.fetchRequest()
+            do
+            {
+                data = try managedContext.fetch(fetchRequest)
+            }catch{
+                print("SCCERROR: Could not fetch data")
+            }
+            // Reverse the data array
+            data.reverse()
+            // Actually reload
+            tableView.reloadData()
         
         }
     }

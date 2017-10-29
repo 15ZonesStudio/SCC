@@ -12,6 +12,9 @@
 		585074F41F677F86007F024F /* StorewiseTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074F31F677F86007F024F /* StorewiseTransactionVC.swift */; };
 		585074F61F677FAF007F024F /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074F51F677FAF007F024F /* ScrollableGraphView.swift */; };
 		585074F81F67815C007F024F /* EmbededExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585074F71F67815C007F024F /* EmbededExtensions.swift */; };
+		5862F8521FA4E2B300085316 /* Store_NTViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5862F8511FA4E2B300085316 /* Store_NTViews.swift */; };
+		5862F8551FA4E7EB00085316 /* Date_NTViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5862F8541FA4E7EB00085316 /* Date_NTViews.swift */; };
+		5862F8571FA5531600085316 /* Amount_NTViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5862F8561FA5531600085316 /* Amount_NTViews.swift */; };
 		58BBA9AC1F5DDCEB00E03E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA9AB1F5DDCEB00E03E30 /* AppDelegate.swift */; };
 		58BBA9AE1F5DDCEB00E03E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */; };
 		58BBA9B11F5DDCEB00E03E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BBA9AF1F5DDCEB00E03E30 /* Main.storyboard */; };
@@ -22,7 +25,6 @@
 		58C147971F6444F1000EAA97 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C147961F6444F1000EAA97 /* TransactionTableViewCell.swift */; };
 		58C147991F644670000EAA97 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C147981F644670000EAA97 /* TableViewController.swift */; };
 		58F710621F8155870055D48F /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 58F710611F8155870055D48F /* .travis.yml */; };
-		58FF0F871F64759D0083E318 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */; };
 		F392951B1E3D1E4074EED942 /* Pods_SCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E289D39A343E0F61C72F3DC /* Pods_SCC.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,9 @@
 		585074F31F677F86007F024F /* StorewiseTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorewiseTransactionVC.swift; sourceTree = "<group>"; };
 		585074F51F677FAF007F024F /* ScrollableGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableGraphView.swift; sourceTree = "<group>"; };
 		585074F71F67815C007F024F /* EmbededExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededExtensions.swift; sourceTree = "<group>"; };
+		5862F8511FA4E2B300085316 /* Store_NTViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store_NTViews.swift; sourceTree = "<group>"; };
+		5862F8541FA4E7EB00085316 /* Date_NTViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_NTViews.swift; sourceTree = "<group>"; };
+		5862F8561FA5531600085316 /* Amount_NTViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount_NTViews.swift; sourceTree = "<group>"; };
 		58BBA9A81F5DDCEB00E03E30 /* SCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BBA9AB1F5DDCEB00E03E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +51,6 @@
 		58C147961F6444F1000EAA97 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		58C147981F644670000EAA97 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		58F710611F8155870055D48F /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
 		DAA42E3362AC9D2CFF35DB53 /* Pods-SCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCC/Pods-SCC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5862F8531FA4E34A00085316 /* NewTransaction Views */ = {
+			isa = PBXGroup;
+			children = (
+				5862F8511FA4E2B300085316 /* Store_NTViews.swift */,
+				5862F8541FA4E7EB00085316 /* Date_NTViews.swift */,
+				5862F8561FA5531600085316 /* Amount_NTViews.swift */,
+			);
+			path = "NewTransaction Views";
+			sourceTree = "<group>";
+		};
 		58BBA99F1F5DDCEB00E03E30 = {
 			isa = PBXGroup;
 			children = (
@@ -112,10 +126,10 @@
 		58BD5EED1F660D100047FD30 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5862F8531FA4E34A00085316 /* NewTransaction Views */,
 				585074F11F677F41007F024F /* MonthlyTransactionVC.swift */,
 				585074F31F677F86007F024F /* StorewiseTransactionVC.swift */,
 				58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */,
-				58FF0F861F64759D0083E318 /* NewTransactionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -282,15 +296,17 @@
 			files = (
 				58BBA9AE1F5DDCEB00E03E30 /* ViewController.swift in Sources */,
 				58C147991F644670000EAA97 /* TableViewController.swift in Sources */,
-				58FF0F871F64759D0083E318 /* NewTransactionViewController.swift in Sources */,
 				58BBA9AC1F5DDCEB00E03E30 /* AppDelegate.swift in Sources */,
 				585074F01F677E9E007F024F /* GraphPageController.swift in Sources */,
 				58C147971F6444F1000EAA97 /* TransactionTableViewCell.swift in Sources */,
 				585074F41F677F86007F024F /* StorewiseTransactionVC.swift in Sources */,
 				585074F21F677F41007F024F /* MonthlyTransactionVC.swift in Sources */,
 				585074F81F67815C007F024F /* EmbededExtensions.swift in Sources */,
+				5862F8571FA5531600085316 /* Amount_NTViews.swift in Sources */,
 				585074F61F677FAF007F024F /* ScrollableGraphView.swift in Sources */,
 				58BD5EF31F6614870047FD30 /* ManagedDatabaseModule.swift in Sources */,
+				5862F8521FA4E2B300085316 /* Store_NTViews.swift in Sources */,
+				5862F8551FA4E7EB00085316 /* Date_NTViews.swift in Sources */,
 				58BBA9B41F5DDCEB00E03E30 /* SCC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

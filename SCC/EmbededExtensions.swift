@@ -9,7 +9,16 @@
 import Foundation
 import UIKit
 
-//This is the declaration of all the extensions used in this app, keeping everything in one place.
+//This is the declaration of all the extensions and class-refrences used in this app, keeping everything in one place.
+
+class DelDetectingTextField: UITextField {
+    override func deleteBackward() {
+        super.deleteBackward()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "deletePressed"), object: nil)
+    }
+    
+}
+
 extension Array {
     func canSupport(index: Int ) -> Bool {
         return index >= startIndex && index < endIndex
@@ -208,5 +217,15 @@ extension UIViewController
     @objc func dismissKeyboard()
     {
         view.endEditing(true)
+    }
+}
+extension String {
+    
+    func contains(_ find: String) -> Bool{
+        return self.range(of: find) != nil
+    }
+    
+    func containsIgnoringCase(_ find: String) -> Bool{
+        return self.range(of: find, options: .caseInsensitive) != nil
     }
 }
