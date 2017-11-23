@@ -112,8 +112,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Handle side menu
-        SideMenuManager.menuPresentMode = .menuSlideIn
-        SideMenuManager.menuPushStyle = .replace
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        SideMenuManager.default.menuFadeStatusBar = false
+        SideMenuManager.default.menuAnimationFadeStrength = 0.25
+        SideMenuManager.default.menuShadowOpacity = 0.5
         
         // Set the budget area
         setBudgetArea()

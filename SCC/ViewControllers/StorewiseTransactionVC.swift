@@ -147,7 +147,7 @@ class StorewiseTransactionVC : UIViewController
         notificationCenter.addObserver(self, selector: #selector(managedObjectContextObjectsDidChange), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
         if graphView == nil
         {
-            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height-20))
+            graphView = ScrollableGraphView(frame: CGRect(x: ContainerView.frame.minX, y: ContainerView.frame.minY, width: UIScreen.main.bounds.width, height: ContainerView.frame.height))
         }
         loadGraph()
     }
