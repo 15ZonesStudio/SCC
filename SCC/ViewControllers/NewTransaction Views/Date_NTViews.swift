@@ -13,6 +13,7 @@ class Date_NTView : UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(Date_NTView.goPrevious), name: NSNotification.Name("deletePressed"), object: nil)
+        self.hideKeyboard()
     }
     
     var isHangingDelete = false

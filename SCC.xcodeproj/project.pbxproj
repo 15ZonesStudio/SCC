@@ -15,6 +15,7 @@
 		5862F8521FA4E2B300085316 /* Store_NTViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5862F8511FA4E2B300085316 /* Store_NTViews.swift */; };
 		5862F8551FA4E7EB00085316 /* Date_NTViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5862F8541FA4E7EB00085316 /* Date_NTViews.swift */; };
 		5862F8571FA5531600085316 /* Amount_NTViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5862F8561FA5531600085316 /* Amount_NTViews.swift */; };
+		589A71741FC877DC00E4F95D /* BudgetGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A71731FC877DC00E4F95D /* BudgetGoalVC.swift */; };
 		58BBA9AC1F5DDCEB00E03E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA9AB1F5DDCEB00E03E30 /* AppDelegate.swift */; };
 		58BBA9AE1F5DDCEB00E03E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */; };
 		58BBA9B11F5DDCEB00E03E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BBA9AF1F5DDCEB00E03E30 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		5862F8511FA4E2B300085316 /* Store_NTViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store_NTViews.swift; sourceTree = "<group>"; };
 		5862F8541FA4E7EB00085316 /* Date_NTViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_NTViews.swift; sourceTree = "<group>"; };
 		5862F8561FA5531600085316 /* Amount_NTViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount_NTViews.swift; sourceTree = "<group>"; };
+		589A71731FC877DC00E4F95D /* BudgetGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetGoalVC.swift; sourceTree = "<group>"; };
 		58BBA9A81F5DDCEB00E03E30 /* SCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BBA9AB1F5DDCEB00E03E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				585074F11F677F41007F024F /* MonthlyTransactionVC.swift */,
 				585074F31F677F86007F024F /* StorewiseTransactionVC.swift */,
 				58BBA9AD1F5DDCEB00E03E30 /* ViewController.swift */,
+				589A71731FC877DC00E4F95D /* BudgetGoalVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				58BD5EF31F6614870047FD30 /* ManagedDatabaseModule.swift in Sources */,
 				5862F8521FA4E2B300085316 /* Store_NTViews.swift in Sources */,
 				5862F8551FA4E7EB00085316 /* Date_NTViews.swift in Sources */,
+				589A71741FC877DC00E4F95D /* BudgetGoalVC.swift in Sources */,
 				58BBA9B41F5DDCEB00E03E30 /* SCC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 class Amount_NTView : UIViewController
 {
+    override func viewDidLoad() {
+        self.hideKeyboard()
+    }
     
     @IBOutlet weak var input: UITextField!
     @IBAction func storeData(_ sender: Any) {

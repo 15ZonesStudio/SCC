@@ -12,6 +12,9 @@ class Store_NTView : UIViewController
 {
     
     @IBOutlet weak var input: UITextField!
+    override func viewDidLoad() {
+        self.hideKeyboard()
+    }
     @IBAction func storeData(_ sender: Any) {
         let defaults = UserDefaults.standard
         if input.text == nil || input.text == ""

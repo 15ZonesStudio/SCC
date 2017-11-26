@@ -14,13 +14,16 @@ class StorewiseTransactionVC : UIViewController
     var graphView: ScrollableGraphView! = nil
     @IBOutlet var ContainerView: UIView!
     @objc let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    func findKeyForValue(value: Double, dictionary: [String : Double]) ->String?
+    func findKeyForValue(value: Double, dictionary: [String : Double], prohibit: [String]) ->String?
     {
         for i in dictionary
         {
             if value == i.value
             {
-                return i.key
+                if !prohibit.contains(i.key)
+                {
+                    return i.key
+                }
             }
         }
         
@@ -35,11 +38,13 @@ class StorewiseTransactionVC : UIViewController
     func mapFromValues(_ array: [Double], Dictionary dict: [String : Double]) -> [String : Double]
     {
         var newDict = [String : Double]()
+        var used = [String]()
         for i in array
         {
-            if let key = findKeyForValue(value: i, dictionary: dict)
+            if let key = findKeyForValue(value: i, dictionary: dict, prohibit: used)
             {
                 newDict[key] = i
+                used.append(key)
             }
         }
         return newDict
@@ -131,7 +136,7 @@ class StorewiseTransactionVC : UIViewController
         graphView.shouldAnimateOnStartup = true
         graphView.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
         graphView.animationDuration = 1.5
-        graphView.dataPointSpacing = 50
+        graphView.dataPointSpacing = 75
         
         graphView.shouldRangeAlwaysStartAtZero = true
         

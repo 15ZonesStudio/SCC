@@ -125,7 +125,10 @@ class ViewController: UIViewController {
         notificationCenter.addObserver(self, selector: #selector(setBudgetArea), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        // Set the budget area
+        setBudgetArea()
+    }
 
 }
 
